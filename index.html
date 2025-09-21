@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrera Solidaria - Corremos por una Causa</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="images/logo.png" alt="Logo Carrera Solidaria" class="logo">
+                <span class="nav-title">Carrera Solidaria</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#objetivo">Objetivo</a></li>
+                <li><a href="#detalles">Detalles</a></li>
+                <li><a href="#precios">Precios</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Carrera Solidaria</h1>
+            <h2 class="hero-subtitle">Corremos por una Causa</h2>
+            <p class="hero-description">Únete a nosotros en esta carrera solidaria para apoyar una causa benéfica</p>
+            <div class="hero-buttons">
+                <a href="#precios" class="btn btn-primary">Inscríbete Ahora</a>
+                <a href="#objetivo" class="btn btn-secondary">Conoce Más</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="images/hero-image.jpg" alt="Carrera Solidaria">
+        </div>
+    </section>
+
+    <!-- Event Details -->
+    <section id="detalles" class="event-details">
+        <div class="container">
+            <h2 class="section-title">Fecha y Ubicación</h2>
+            <div class="event-info">
+                <div class="event-card">
+                    <i class="fas fa-calendar-alt"></i>
+                    <h3>Fecha</h3>
+                    <p id="event-date">Domingo, 15 de octubre de 2024</p>
+                </div>
+                <div class="event-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Lugar</h3>
+                    <p id="event-location">Plaza Central</p>
+                </div>
+                <div class="event-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>Hora de Inicio</h3>
+                    <p id="event-time">9:00 AM</p>
+                </div>
+            </div>
+
+            <h3 class="distances-title">Distancias y Horarios</h3>
+            <div class="distances-grid" id="distances-container">
+                <!-- Distances will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Objective Section -->
+    <section id="objetivo" class="objective">
+        <div class="container">
+            <h2 class="section-title">Objetivo Solidario</h2>
+            <div class="objective-content">
+                <div class="objective-text">
+                    <p id="objective-description">
+                        El evento tiene como finalidad apoyar una causa benéfica muy importante. 
+                        Todos los fondos recaudados se destinarán a organizaciones que trabajan 
+                        para hacer la diferencia en nuestra comunidad.
+                    </p>
+                    <div class="organization-info">
+                        <h4>Organización Beneficiaria:</h4>
+                        <p id="beneficiary-org">Nombre de la Organización</p>
+                    </div>
+                </div>
+                <div class="objective-image">
+                    <img src="images/objective-image.jpg" alt="Causa Solidaria">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Status -->
+    <section class="registration-status">
+        <div class="container">
+            <div class="status-card">
+                <h3 id="registration-status-title">Estado de Inscripciones</h3>
+                <p id="registration-status-text">¡Inscripciones Abiertas!</p>
+                <a href="#precios" class="btn btn-primary" id="registration-btn">Ver Precios</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="precios" class="pricing">
+        <div class="container">
+            <h2 class="section-title">Precios de Inscripción</h2>
+            <div class="pricing-grid" id="pricing-container">
+                <!-- Pricing will be populated by JavaScript -->
+            </div>
+            <div class="donation-section">
+                <h3>Donaciones Directas</h3>
+                <p>Si no puedes participar pero quieres colaborar, puedes hacer una donación directa:</p>
+                <div class="donation-amounts">
+                    <button class="donation-btn" data-amount="10">10€</button>
+                    <button class="donation-btn" data-amount="25">25€</button>
+                    <button class="donation-btn" data-amount="50">50€</button>
+                    <button class="donation-btn" data-amount="100">100€</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Awards -->
+    <section class="awards">
+        <div class="container">
+            <h2 class="section-title">Premios</h2>
+            <div class="awards-grid" id="awards-container">
+                <!-- Awards will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="servicios" class="services">
+        <div class="container">
+            <h2 class="section-title">Servicios al Corredor</h2>
+            <div class="services-grid" id="services-container">
+                <!-- Services will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Sponsors -->
+    <section class="sponsors">
+        <div class="container">
+            <h2 class="section-title">Patrocinadores</h2>
+            <div class="sponsors-grid" id="sponsors-container">
+                <!-- Sponsors will be populated by JavaScript -->
+            </div>
+            <div class="become-sponsor">
+                <h3>¿Quieres ser patrocinador?</h3>
+                <p>Ponte en contacto con nosotros para conocer las opciones de colaboración</p>
+                <a href="#contacto" class="btn btn-secondary">Contactar</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contacto" class="contact">
+        <div class="container">
+            <h2 class="section-title">Contacto</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p id="contact-email">info@carrerasolidaria.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Teléfono</h4>
+                            <p id="contact-phone">+34 123 456 789</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Dirección</h4>
+                            <p id="contact-address">Dirección de contacto</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" id="contact-form">
+                    <h3>Formulario de Contacto</h3>
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Nombre y Apellido" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Correo Electrónico" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" name="phone" placeholder="Teléfono" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="organization" placeholder="Empresa/Organización">
+                    </div>
+                    <div class="form-group">
+                        <select name="collaboration" required>
+                            <option value="">Tipo de Colaboración</option>
+                            <option value="economic">Económica</option>
+                            <option value="material">Material</option>
+                            <option value="volunteer">Voluntariado</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" placeholder="Comentarios" rows="4"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/logo.png" alt="Logo">
+                    <span>Carrera Solidaria</span>
+                </div>
+                <div class="footer-links">
+                    <a href="#objetivo">Objetivo</a>
+                    <a href="#detalles">Detalles</a>
+                    <a href="#precios">Precios</a>
+                    <a href="#servicios">Servicios</a>
+                    <a href="#contacto">Contacto</a>
+                </div>
+                <div class="footer-social">
+                    <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Carrera Solidaria. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
