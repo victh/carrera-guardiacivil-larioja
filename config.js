@@ -9,25 +9,23 @@ const CONFIG = {
     // BASIC EVENT INFORMATION
     // ====================================
     event: {
-        title: "Carrera Solidaria",
-        subtitle: "Corremos por una Causa",
-        description: "Únete a nosotros en esta carrera solidaria para apoyar una causa benéfica",
-        date: "Domingo, 15 de octubre de 2024",
-        location: "Plaza Central",
-        time: "9:00 AM",
-        maxTimeLimit: "1 hora" // Maximum time to complete the race
+        title: "I Carrera Solidaria Guardia Civil de La Rioja",
+        subtitle: "Corremos a favor de ARPA Autismo",
+        description: "Únete a nosotros en esta carrera solidaria para apoyar a ARPA Autismo",
+        date: "Domingo, 16 de noviembre de 2025",
+        location: "xx.location",
+        time: "xx.time",
+        maxTimeLimit: "xx.racetime" // Maximum time to complete the race
     },
 
     // ====================================
     // SOLIDARITY OBJECTIVE
     // ====================================
     objective: {
-        description: `El evento tiene como finalidad apoyar una causa benéfica muy importante. 
-        Todos los fondos recaudados se destinarán a organizaciones que trabajan 
-        para hacer la diferencia en nuestra comunidad.`,
-        beneficiaryOrg: "Nombre de la Organización Beneficiaria",
+        description: `El evento tiene como finalidad apoyar a ARPA Autismo, una organización que ayuda a los niños con autismo y sus familias.`,
+        beneficiaryOrg: "ARPA Autismo",
         // You can add more details about the cause here
-        causeDetails: "Descripción detallada de la causa que apoya la carrera"
+        causeDetails: "ARPA Autismo es una organización que ayuda a los niños con autismo y sus familias. Ayudamos a los niños con autismo a desarrollar sus habilidades y a sus familias a entender mejor el autismo."
     },
 
     // ====================================
@@ -36,38 +34,32 @@ const CONFIG = {
     distances: [
         {
             distance: "500M",
-            category: "Niños (2018-2020)",
-            time: "9:00h",
+            category: "Niños (2016-2017)",
+            time: "xx.time1",
             description: "Carrera para los más pequeños"
         },
         {
-            distance: "500M",
-            category: "Niños (2015-2017)",
-            time: "9:10h",
+            distance: "1KM",
+            category: "Niños (2013-2016)",
+            time: "xx.time2",
             description: "Carrera para niños"
         },
         {
-            distance: "1KM",
-            category: "Niños (2012-2014)",
-            time: "9:20h",
-            description: "Carrera infantil"
-        },
-        {
-            distance: "2.5KM",
-            category: "Juvenil (2009-2011)",
-            time: "9:30h",
+            distance: "2KM",
+            category: "Juvenil (2010-2012)",
+            time: "xx.time3",
             description: "Carrera juvenil"
         },
         {
-            distance: "5KM",
-            category: "Adultos (desde 2008)",
-            time: "10:00h",
-            description: "Carrera principal"
+            distance: "6KM",
+            category: "Completa (desde 2009)",
+            time: "xx.time4",
+            description: "Carrera completa"
         },
         {
-            distance: "5KM Caminata",
-            category: "Todas las edades",
-            time: "10:00h",
+            distance: "6KM",
+            category: "Caminata (todas las edades)",
+            time: "xx.time5",
             description: "Caminata solidaria"
         }
     ],
@@ -89,19 +81,19 @@ const CONFIG = {
     pricing: [
         {
             category: "5KM y Caminata 5KM",
-            price: "12€",
+            price: "xx",
             description: "Incluye camiseta, dorsal con chip y bolsa del corredor",
             featured: true // This will be highlighted
         },
         {
             category: "Distancias menores",
-            price: "6€",
+            price: "xx",
             description: "2.5KM, 1KM, 500M - Incluye camiseta y dorsal",
             featured: false
         },
         {
             category: "Familias",
-            price: "50€",
+            price: "xx",
             description: "Hasta 10 miembros - Incluye camisetas y dorsales",
             featured: false
         },

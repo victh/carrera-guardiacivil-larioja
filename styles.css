@@ -53,7 +53,7 @@ body {
 .nav-title {
     font-size: 1.5rem;
     font-weight: 600;
-    color: #2563eb;
+    color: #2E7D0A;
 }
 
 .nav-menu {
@@ -70,7 +70,7 @@ body {
 }
 
 .nav-menu a:hover {
-    color: #2563eb;
+    color: #2E7D0A;
 }
 
 .hamburger {
@@ -91,21 +91,25 @@ body {
 .hero {
     margin-top: 80px;
     padding: 4rem 0;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, rgba(46, 125, 10, 0.8) 0%, rgba(26, 74, 5, 0.8) 100%), url('images/hero-image.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     color: white;
     display: flex;
     align-items: center;
+    justify-content: center;
     min-height: 80vh;
+    position: relative;
 }
 
 .hero-content {
-    max-width: 1200px;
+    max-width: 800px;
     margin: 0 auto;
     padding: 0 20px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: center;
+    text-align: center;
+    z-index: 2;
+    position: relative;
 }
 
 .hero-title {
@@ -132,6 +136,7 @@ body {
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .btn {
@@ -147,7 +152,7 @@ body {
 
 .btn-primary {
     background: #ffffff;
-    color: #2563eb;
+    color: #2E7D0A;
 }
 
 .btn-primary:hover {
@@ -164,14 +169,11 @@ body {
 
 .btn-secondary:hover {
     background: white;
-    color: #2563eb;
+    color: #2E7D0A;
 }
 
-.hero-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 12px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+.hero-image {
+    display: none;
 }
 
 /* Section Styles */
@@ -211,7 +213,7 @@ body {
 
 .event-card i {
     font-size: 2.5rem;
-    color: #2563eb;
+    color: #D4AF37;
     margin-bottom: 1rem;
 }
 
@@ -245,7 +247,7 @@ body {
     background: white;
     padding: 1.5rem;
     border-radius: 8px;
-    border-left: 4px solid #2563eb;
+    border-left: 4px solid #2E7D0A;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
@@ -281,9 +283,9 @@ body {
 .organization-info {
     margin-top: 2rem;
     padding: 1.5rem;
-    background: #f0f9ff;
+    background: #f0f7f0;
     border-radius: 8px;
-    border-left: 4px solid #2563eb;
+    border-left: 4px solid #2E7D0A;
 }
 
 .organization-info h4 {
@@ -301,7 +303,7 @@ body {
 /* Registration Status */
 .registration-status {
     padding: 3rem 0;
-    background: #2563eb;
+    background: #2E7D0A;
     color: white;
     text-align: center;
 }
@@ -346,7 +348,7 @@ body {
 }
 
 .price-card.featured {
-    border: 2px solid #2563eb;
+    border: 2px solid #2E7D0A;
     transform: scale(1.05);
 }
 
@@ -355,7 +357,7 @@ body {
     position: absolute;
     top: 0;
     right: 0;
-    background: #2563eb;
+    background: #2E7D0A;
     color: white;
     padding: 0.5rem 1rem;
     font-size: 0.8rem;
@@ -373,7 +375,7 @@ body {
 .price {
     font-size: 2.5rem;
     font-weight: 700;
-    color: #2563eb;
+    color: #2E7D0A;
     margin-bottom: 1rem;
 }
 
@@ -405,9 +407,9 @@ body {
 
 .donation-btn {
     padding: 12px 24px;
-    border: 2px solid #2563eb;
+    border: 2px solid #2E7D0A;
     background: transparent;
-    color: #2563eb;
+    color: #2E7D0A;
     border-radius: 8px;
     font-weight: 600;
     cursor: pointer;
@@ -415,7 +417,7 @@ body {
 }
 
 .donation-btn:hover {
-    background: #2563eb;
+    background: #2E7D0A;
     color: white;
 }
 
@@ -440,7 +442,7 @@ body {
 
 .award-item i {
     font-size: 3rem;
-    color: #fbbf24;
+    color: #D4AF37;
     margin-bottom: 1rem;
 }
 
@@ -473,7 +475,7 @@ body {
 
 .service-item i {
     font-size: 2.5rem;
-    color: #2563eb;
+    color: #2E7D0A;
     margin-bottom: 1rem;
 }
 
@@ -519,7 +521,7 @@ body {
 .become-sponsor {
     text-align: center;
     padding: 3rem;
-    background: #f0f9ff;
+    background: #f0f7f0;
     border-radius: 12px;
 }
 
@@ -560,7 +562,7 @@ body {
 
 .contact-item i {
     font-size: 1.5rem;
-    color: #2563eb;
+    color: #2E7D0A;
     min-width: 24px;
 }
 
@@ -607,7 +609,7 @@ body {
 .form-group select:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: #2563eb;
+    border-color: #2E7D0A;
 }
 
 /* Footer */
@@ -703,10 +705,13 @@ body {
         left: 0;
     }
 
+    .hero {
+        background-attachment: scroll;
+    }
+    
     .hero-content {
-        grid-template-columns: 1fr;
-        text-align: center;
-        gap: 2rem;
+        max-width: 90%;
+        padding: 0 15px;
     }
 
     .hero-title {
