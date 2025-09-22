@@ -46,7 +46,7 @@ body {
 }
 
 .logo {
-    height: 40px;
+    height: 70px;
     width: auto;
 }
 
@@ -112,6 +112,20 @@ body {
     position: relative;
 }
 
+.hero-logo {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.hero-logo-img {
+    max-width: 300px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    border-radius: 10px;
+    /*box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);*/
+}
+
 .hero-title {
     font-size: 3.5rem;
     font-weight: 700;
@@ -170,6 +184,22 @@ body {
 .btn-secondary:hover {
     background: white;
     color: #2E7D0A;
+}
+
+.btn-registration {
+    background: linear-gradient(135deg, #d4af37, #f4d03f);
+    color: #1a1a1a;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn-registration:hover {
+    background: linear-gradient(135deg, #b8941f, #d4af37);
+    color: #000;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
 }
 
 .hero-image {
@@ -493,18 +523,68 @@ body {
 }
 
 .sponsors-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
     margin-bottom: 3rem;
+}
+
+/* Priority sponsors row - larger and highlighted */
+.sponsors-priority-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, #f0f7f0, #e8f5e8);
+    border-radius: 16px;
+    border: 2px solid #2E7D0A;
+}
+
+.sponsor-priority {
+    background: white;
+    padding: 3rem;
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 180px;
+    box-shadow: 0 4px 12px rgba(46, 125, 10, 0.15);
+}
+
+.sponsor-priority:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(46, 125, 10, 0.25);
+}
+
+.sponsor-priority img {
+    max-width: 100%;
+    height: auto;
+    max-height: 120px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Regular sponsors table */
+.sponsors-table {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.5rem;
 }
 
 .sponsor-item {
     background: #f8fafc;
-    padding: 2rem;
+    padding: 1.5rem;
     border-radius: 8px;
     text-align: center;
     transition: transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 120px;
 }
 
 .sponsor-item:hover {
@@ -516,6 +596,36 @@ body {
     height: auto;
     max-height: 80px;
     object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Responsive design for sponsors */
+@media (max-width: 1024px) {
+    .sponsors-priority-row {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .sponsors-table {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .sponsors-table {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    
+    .sponsor-priority {
+        padding: 2rem;
+        min-height: 140px;
+    }
+    
+    .sponsor-priority img {
+        max-height: 100px;
+    }
 }
 
 .become-sponsor {
@@ -822,5 +932,123 @@ body {
 
 .visible {
     display: block;
+}
+
+/* ====================================
+   OFFICIAL T-SHIRT SECTION
+   ==================================== */
+.shirt-section {
+    padding: 5rem 0;
+    background: white;
+}
+
+.shirt-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+.shirt-image {
+    position: relative;
+    text-align: center;
+}
+
+.shirt-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.shirt-image img:hover {
+    transform: scale(1.05);
+}
+
+.shirt-placeholder {
+    background: #f8fafc;
+    border: 2px dashed #cbd5e1;
+    border-radius: 12px;
+    padding: 3rem;
+    text-align: center;
+    color: #64748b;
+}
+
+.shirt-placeholder i {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    color: #94a3b8;
+}
+
+.shirt-info h3 {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.shirt-info p {
+    font-size: 1.1rem;
+    color: #64748b;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.shirt-features {
+    list-style: none;
+    padding: 0;
+}
+
+.shirt-features li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    color: #374151;
+}
+
+.shirt-features li::before {
+    content: '✓';
+    background: var(--primary-color);
+    color: white;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+    .shirt-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .shirt-image {
+        order: 1;
+    }
+    
+    .shirt-info {
+        order: 2;
+        text-align: center;
+    }
+    
+    .shirt-info h3 {
+        font-size: 1.5rem;
+    }
+    
+    .shirt-features li {
+        justify-content: center;
+    }
+    
+    .hero-logo-img {
+        max-width: 150px;
+    }
 }
 

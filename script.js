@@ -23,6 +23,8 @@ function initializeWebsite() {
     populatePricing();
     populateAwards();
     populateServices();
+    populateShirt();
+    populateGallery();
     populateSponsors();
     populateContact();
     
@@ -92,7 +94,7 @@ function populatePricing() {
             <h3>${price.category}</h3>
             <div class="price">${price.price}</div>
             <p>${price.description}</p>
-            <button class="btn btn-primary" onclick="handleRegistration('${price.category}')">
+            <button class="btn btn-registration" onclick="handleRegistration('${price.category}')">
                 Inscribirse
             </button>
         `;
@@ -133,6 +135,57 @@ function populateServices() {
     });
 }
 
+function populateShirt() {
+    if (!CONFIG.settings.showShirtSection) {
+        const shirtSection = document.querySelector('.shirt-section');
+        if (shirtSection) shirtSection.style.display = 'none';
+        return;
+    }
+    
+    // Update shirt content
+    document.getElementById('shirt-title').textContent = CONFIG.shirt.title;
+    document.getElementById('shirt-subtitle').textContent = CONFIG.shirt.subtitle;
+    document.getElementById('shirt-description').textContent = CONFIG.shirt.description;
+    
+    // Update shirt image
+    const shirtImg = document.getElementById('shirt-img');
+    if (shirtImg) {
+        shirtImg.src = CONFIG.images.shirtImage;
+    }
+    
+    // Populate features
+    const featuresContainer = document.getElementById('shirt-features');
+    if (featuresContainer) {
+        featuresContainer.innerHTML = '';
+        CONFIG.shirt.features.forEach(feature => {
+            const featureItem = document.createElement('li');
+            featureItem.textContent = feature;
+            featuresContainer.appendChild(featureItem);
+        });
+    }
+}
+
+function populateGallery() {
+    const container = document.getElementById('gallery-container');
+    if (!container) return;
+    
+    container.innerHTML = '';
+    
+    if (!CONFIG.settings.showGallery) {
+        document.querySelector('.gallery').style.display = 'none';
+        return;
+    }
+    
+    CONFIG.images.galleryImages.forEach((imagePath, index) => {
+        const galleryItem = document.createElement('div');
+        galleryItem.className = 'gallery-item';
+        galleryItem.innerHTML = `
+            <img src="${imagePath}" alt="Galería ${index + 1}" loading="lazy" onclick="openGalleryModal('${imagePath}')">
+        `;
+        container.appendChild(galleryItem);
+    });
+}
+
 function populateSponsors() {
     const container = document.getElementById('sponsors-container');
     container.innerHTML = '';
@@ -142,26 +195,78 @@ function populateSponsors() {
         return;
     }
     
-    CONFIG.sponsors.forEach(sponsor => {
-        const sponsorItem = document.createElement('div');
-        sponsorItem.className = 'sponsor-item';
+    // Define priority sponsors (GuardiaCivil, AYTO, ARPA)
+    const prioritySponsors = CONFIG.sponsors.filter(sponsor => 
+        sponsor.category === 'principal' || 
+        sponsor.category === 'institucional' || 
+        sponsor.category === 'beneficiario' ||
+        sponsor.name.toLowerCase().includes('guardia civil') ||
+        sponsor.name.toLowerCase().includes('ayuntamiento') ||
+        sponsor.name.toLowerCase().includes('arpa')
+    ).slice(0, 3); // Take only first 3 priority sponsors
+    
+    // Get remaining sponsors
+    const regularSponsors = CONFIG.sponsors.filter(sponsor => 
+        !prioritySponsors.includes(sponsor)
+    );
+    
+    // Create priority sponsors row
+    if (prioritySponsors.length > 0) {
+        const priorityRow = document.createElement('div');
+        priorityRow.className = 'sponsors-priority-row';
         
-        const content = `
-            <img src="${sponsor.logo}" alt="${sponsor.name}" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-            <div style="display:none; padding: 20px; color: #666;">
-                <i class="fas fa-image" style="font-size: 2rem; margin-bottom: 10px;"></i>
-                <p>${sponsor.name}</p>
-            </div>
-        `;
+        prioritySponsors.forEach(sponsor => {
+            const sponsorItem = document.createElement('div');
+            sponsorItem.className = 'sponsor-priority';
+            
+            const content = `
+                <img src="${sponsor.logo}" alt="${sponsor.name}" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div style="display:none; padding: 20px; color: #666;">
+                    <i class="fas fa-image" style="font-size: 3rem; margin-bottom: 15px;"></i>
+                    <p style="font-size: 1.1rem; font-weight: 600;">${sponsor.name}</p>
+                </div>
+            `;
+            
+            if (sponsor.website) {
+                sponsorItem.innerHTML = `<a href="${sponsor.website}" target="_blank" style="display: flex; align-items: center; justify-content: center; height: 100%;">${content}</a>`;
+            } else {
+                sponsorItem.innerHTML = content;
+            }
+            
+            priorityRow.appendChild(sponsorItem);
+        });
         
-        if (sponsor.website) {
-            sponsorItem.innerHTML = `<a href="${sponsor.website}" target="_blank">${content}</a>`;
-        } else {
-            sponsorItem.innerHTML = content;
-        }
+        container.appendChild(priorityRow);
+    }
+    
+    // Create regular sponsors table
+    if (regularSponsors.length > 0) {
+        const sponsorsTable = document.createElement('div');
+        sponsorsTable.className = 'sponsors-table';
         
-        container.appendChild(sponsorItem);
-    });
+        regularSponsors.forEach(sponsor => {
+            const sponsorItem = document.createElement('div');
+            sponsorItem.className = 'sponsor-item';
+            
+            const content = `
+                <img src="${sponsor.logo}" alt="${sponsor.name}" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div style="display:none; padding: 15px; color: #666;">
+                    <i class="fas fa-image" style="font-size: 1.5rem; margin-bottom: 8px;"></i>
+                    <p style="font-size: 0.9rem;">${sponsor.name}</p>
+                </div>
+            `;
+            
+            if (sponsor.website) {
+                sponsorItem.innerHTML = `<a href="${sponsor.website}" target="_blank" style="display: flex; align-items: center; justify-content: center; height: 100%;">${content}</a>`;
+            } else {
+                sponsorItem.innerHTML = content;
+            }
+            
+            sponsorsTable.appendChild(sponsorItem);
+        });
+        
+        container.appendChild(sponsorsTable);
+    }
 }
 
 function populateContact() {
@@ -254,13 +359,8 @@ function setupSmoothScrolling() {
 }
 
 function setupContactForm() {
-    const form = document.getElementById('contact-form');
-    if (!form || !CONFIG.settings.enableContactForm) return;
-    
-    form.addEventListener('submit', function(e) {
-        e.preventDefault();
-        handleContactForm(this);
-    });
+    // Contact form has been removed - no setup needed
+    return;
 }
 
 function addScrollAnimations() {
@@ -278,7 +378,7 @@ function addScrollAnimations() {
     }, observerOptions);
     
     // Observe elements for animation
-    document.querySelectorAll('.event-card, .price-card, .service-item, .award-item').forEach(el => {
+    document.querySelectorAll('.event-card, .price-card, .service-item, .award-item, .shirt-section, .gallery-item').forEach(el => {
         observer.observe(el);
     });
 }
@@ -295,10 +395,10 @@ function handleRegistration(category) {
         return;
     }
     
-    showNotification(`Inscripción para ${category}. Redirigiendo al sistema de registro...`, 'info');
+    showNotification(`Inscripción para ${category}. Redirigiendo a la plataforma de inscripciones...`, 'info');
     
     // Here you would typically redirect to a registration system
-    // window.location.href = 'https://your-registration-system.com';
+    window.location.href = 'https://www.rockthesport.com/es/evento/gc_carrera_popular_la_rioja';
     
     // Or open a modal with registration form
     // openRegistrationModal(category);
@@ -308,31 +408,10 @@ function handleDonation(amount) {
     showNotification(`Donación de ${amount}€. Redirigiendo al sistema de pagos...`, 'info');
     
     // Here you would integrate with a payment system
-    // window.location.href = `https://your-payment-system.com?amount=${amount}`;
+    window.location.href = 'https://www.rockthesport.com/es/evento/gc_carrera_popular_la_rioja';
 }
 
-function handleContactForm(form) {
-    // Get form data
-    const formData = new FormData(form);
-    const data = Object.fromEntries(formData);
-    
-    // Show loading state
-    const submitBtn = form.querySelector('button[type="submit"]');
-    const originalText = submitBtn.textContent;
-    submitBtn.textContent = 'Enviando...';
-    submitBtn.disabled = true;
-    
-    // Simulate form submission (replace with actual form handling)
-    setTimeout(() => {
-        showNotification('Mensaje enviado correctamente. Te contactaremos pronto.', 'success');
-        form.reset();
-        submitBtn.textContent = originalText;
-        submitBtn.disabled = false;
-    }, 2000);
-    
-    // Here you would typically send the form data to your server
-    // fetch('/contact', { method: 'POST', body: formData })...
-}
+// Contact form has been removed - function no longer needed
 
 // ====================================
 // UTILITY FUNCTIONS

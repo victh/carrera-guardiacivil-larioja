@@ -21,6 +21,7 @@
                 <li><a href="#detalles">Detalles</a></li>
                 <li><a href="#precios">Precios</a></li>
                 <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#camiseta">Camiseta</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
             <div class="hamburger">
@@ -34,11 +35,14 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
+            <div class="hero-logo">
+                <img src="images/garras_inicio.png" alt="Logo Guardia Civil" class="hero-logo-img">
+            </div>
             <h1 class="hero-title">Carrera Solidaria</h1>
             <h2 class="hero-subtitle">Corremos por una Causa</h2>
             <p class="hero-description">Únete a nosotros en esta carrera solidaria para apoyar una causa benéfica</p>
             <div class="hero-buttons">
-                <a href="#precios" class="btn btn-primary">Inscríbete Ahora</a>
+                <a href="#precios" class="btn btn-registration">Inscríbete Ahora</a>
                 <a href="#objetivo" class="btn btn-secondary">Conoce Más</a>
             </div>
         </div>
@@ -55,7 +59,7 @@
                 <div class="event-card">
                     <i class="fas fa-calendar-alt"></i>
                     <h3>Fecha</h3>
-                    <p id="event-date">Domingo, 15 de octubre de 2024</p>
+                    <p id="event-date">Domingo, 16 de noviembre de 2025</p>
                 </div>
                 <div class="event-card">
                     <i class="fas fa-map-marker-alt"></i>
@@ -117,16 +121,6 @@
             <div class="pricing-grid" id="pricing-container">
                 <!-- Pricing will be populated by JavaScript -->
             </div>
-            <div class="donation-section">
-                <h3>Donaciones Directas</h3>
-                <p>Si no puedes participar pero quieres colaborar, puedes hacer una donación directa:</p>
-                <div class="donation-amounts">
-                    <button class="donation-btn" data-amount="10">10€</button>
-                    <button class="donation-btn" data-amount="25">25€</button>
-                    <button class="donation-btn" data-amount="50">50€</button>
-                    <button class="donation-btn" data-amount="100">100€</button>
-                </div>
-            </div>
         </div>
     </section>
 
@@ -150,17 +144,35 @@
         </div>
     </section>
 
+    <!-- Official T-Shirt -->
+    <section id="camiseta" class="shirt-section">
+        <div class="container">
+            <h2 class="section-title" id="shirt-title">Camiseta Oficial</h2>
+            <div class="shirt-content">
+                <div class="shirt-image">
+                    <img id="shirt-img" src="images/camiseta.png" alt="Camiseta Oficial de la Carrera" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <div class="shirt-placeholder" style="display:none;">
+                        <i class="fas fa-tshirt"></i>
+                        <p>Imagen de camiseta próximamente</p>
+                    </div>
+                </div>
+                <div class="shirt-info">
+                    <h3 id="shirt-subtitle">Diseño Conmemorativo</h3>
+                    <p id="shirt-description">Camiseta técnica oficial incluida en todas las inscripciones.</p>
+                    <ul class="shirt-features" id="shirt-features">
+                        <!-- Features will be populated by JavaScript -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Sponsors -->
     <section class="sponsors">
         <div class="container">
             <h2 class="section-title">Patrocinadores</h2>
             <div class="sponsors-grid" id="sponsors-container">
                 <!-- Sponsors will be populated by JavaScript -->
-            </div>
-            <div class="become-sponsor">
-                <h3>¿Quieres ser patrocinador?</h3>
-                <p>Ponte en contacto con nosotros para conocer las opciones de colaboración</p>
-                <a href="#contacto" class="btn btn-secondary">Contactar</a>
             </div>
         </div>
     </section>
@@ -169,57 +181,28 @@
     <section id="contacto" class="contact">
         <div class="container">
             <h2 class="section-title">Contacto</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <h4>Email</h4>
-                            <p id="contact-email">info@carrerasolidaria.com</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <div>
-                            <h4>Teléfono</h4>
-                            <p id="contact-phone">+34 123 456 789</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <h4>Dirección</h4>
-                            <p id="contact-address">Dirección de contacto</p>
-                        </div>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h4>Email</h4>
+                        <p id="contact-email">info@carrerasolidaria.com</p>
                     </div>
                 </div>
-                <form class="contact-form" id="contact-form">
-                    <h3>Formulario de Contacto</h3>
-                    <div class="form-group">
-                        <input type="text" name="name" placeholder="Nombre y Apellido" required>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <h4>Teléfono</h4>
+                        <p id="contact-phone">+34 123 456 789</p>
                     </div>
-                    <div class="form-group">
-                        <input type="email" name="email" placeholder="Correo Electrónico" required>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h4>Dirección</h4>
+                        <p id="contact-address">Dirección de contacto</p>
                     </div>
-                    <div class="form-group">
-                        <input type="tel" name="phone" placeholder="Teléfono" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" name="organization" placeholder="Empresa/Organización">
-                    </div>
-                    <div class="form-group">
-                        <select name="collaboration" required>
-                            <option value="">Tipo de Colaboración</option>
-                            <option value="economic">Económica</option>
-                            <option value="material">Material</option>
-                            <option value="volunteer">Voluntariado</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <textarea name="message" placeholder="Comentarios" rows="4"></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Enviar</button>
-                </form>
+                </div>
             </div>
         </div>
     </section>
@@ -237,16 +220,15 @@
                     <a href="#detalles">Detalles</a>
                     <a href="#precios">Precios</a>
                     <a href="#servicios">Servicios</a>
+                    <a href="#camiseta">Camiseta</a>
                     <a href="#contacto">Contacto</a>
                 </div>
                 <div class="footer-social">
-                    <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
                     <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Carrera Solidaria. Todos los derechos reservados.</p>
+                <p>&copy; 2025 Carrera Solidaria. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
