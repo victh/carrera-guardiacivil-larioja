@@ -128,24 +128,14 @@ const CONFIG = {
     // ====================================
     services: [
         {
-            name: "Liebres-guía",
-            description: "Para las carreras de 2KM y 6KM.",
-            icon: "fas fa-running"
-        },
-        {
             name: "Vestuarios y Duchas",
-            description: "Vestuarios y duchas disponibles.",
+            description: "Vestuarios y duchas disponibles",
             icon: "fas fa-shower"
         },
         {
             name: "Bolsa del Corredor",
             description: "Para todos los participantes al recoger el dorsal",
             icon: "fas fa-gift"
-        },
-        {
-            name: "Seguridad y Sanidad",
-            description: "Seguro de responsabilidad civil y dispositivo médico",
-            icon: "fas fa-shield-alt"
         },
         {
             name: "Música",
@@ -158,7 +148,7 @@ const CONFIG = {
             icon: "fas fa-stopwatch"
         },
         {
-            name: "Aperitivo Post-carrera",
+            name: "Degustaciones",
             description: "Degustación solidaria al finalizar la carrera",
             icon: "fas fa-utensils"
         },
@@ -169,8 +159,8 @@ const CONFIG = {
         },
         {
             name: "Exposición de medios",
-            description: "Exposición de medios",
-            icon: "fas fa-camera"
+            description: "Exposición de medios de la Guardia Civil",
+            icon: "fas fa-newspaper"
         },
         {
             name: "Animación infantil",
@@ -228,31 +218,31 @@ const CONFIG = {
         {
             name: "Bodegas Marqués de Cáceres",
             logo: "images/sponsors/MArques de Caceres.png",
-            website: "https://www.marquesdecaceres.com",
+            website: "https://www.marquesdecaceres.com/",
             category: "alimentacion"
         },
         {
             name: "Bodegas Lecea",
             logo: "images/sponsors/Bodegas lecea.jpg",
-            website: "",
+            website: "https://www.bodegaslecea.com/",
             category: "alimentacion"
         },
         {
             name: "Vivanco",
             logo: "images/sponsors/Vivanco.png",
-            website: "https://www.vivancoculturadevino.es",
+            website: "https://vivancoculturadevino.es/es/",
             category: "alimentacion"
         },
         {
             name: "Mazapanes Soto",
             logo: "images/sponsors/MAzapanes soto.png",
-            website: "",
+            website: "https://www.mazapanesdesotosegura.es/",
             category: "alimentacion"
         },
         {
             name: "Peras Rincón",
             logo: "images/sponsors/Peras rincon.jpg",
-            website: "",
+            website: "https://www.perasderincondesoto.com/",
             category: "alimentacion"
         },
         {
@@ -265,26 +255,26 @@ const CONFIG = {
         {
             name: "VW Rioja Motor",
             logo: "images/sponsors/LOGO VW RIOJA MOTOR.jpg",
-            website: "",
+            website: "https://riojamotor.com/",
             category: "automocion"
         },
         {
             name: "Gasolinera Jubera",
             logo: "images/sponsors/Gasolinera jubera.jpg",
-            website: "",
+            website: "https://gasoleosjubera.es/",
             category: "automocion"
         },
         // TECNOLOGÍA Y SERVICIOS
         {
             name: "Genergy",
             logo: "images/sponsors/genergy.jpg",
-            website: "https://www.genergy.com",
+            website: "https://genergy.es/?gad_source=1&gad_campaignid=7850189750&gbraid=0AAAAAD4MjHDCdNs0SsTvqlCVUvMp73w_j&gclid=Cj0KCQjw8KrFBhDUARIsAMvIApaasOCupFTYO9Inp75zs2duxD2eJjXaeN9O0edUAFR1WKeYpLuJLXYaArOMEALw_wcB",
             category: "tecnologia"
         },
         {
             name: "Centro Tecnológico Champiñón",
             logo: "images/sponsors/Centro tecnologico champi.jpeg",
-            website: "",
+            website: "https://ctich.com/",
             category: "tecnologia"
         },
         {
@@ -296,26 +286,26 @@ const CONFIG = {
         {
             name: "RECIRSA",
             logo: "images/sponsors/RECIRSA.jpg",
-            website: "",
+            website: "https://www.recirsa.com/",
             category: "servicios"
         },
         // SALUD Y BIENESTAR
         {
             name: "Doctor Toledo",
             logo: "images/sponsors/Doctor Toledo.png",
-            website: "",
+            website: "https://doctortoledo.es/",
             category: "salud"
         },
         {
             name: "Rioja Cuida",
             logo: "images/sponsors/Rioja Cuida.png",
-            website: "",
+            website: "https://bi.larioja.org/pentaho/lariojacuida/",
             category: "salud"
         },
         {
             name: "Sirona",
             logo: "images/sponsors/Sirona.png",
-            website: "",
+            website: "https://www.instagram.com/sironafisio/",
             category: "salud"
         },
         // EDUCACIÓN
@@ -329,126 +319,138 @@ const CONFIG = {
         {
             name: "Club Coloma",
             logo: "images/sponsors/Club Coloma.jpeg",
-            website: "",
+            website: "https://colomabikeclub.com/",
             category: "deportivo"
         },
         {
             name: "Biciván",
             logo: "images/sponsors/LOGO BICIVÁN TRAZADO.jpg",
-            website: "",
+            website: "https://bicivan.com/",
             category: "deportivo"
         },
         {
             name: "Calle Activa",
             logo: "images/sponsors/calle-activa.png",
-            website: "",
+            website: "https://www.calleactiva.es/",
             category: "deportivo"
         },
         {
             name: "Zenit",
             logo: "images/sponsors/Zenit.jpg",
-            website: "",
+            website: "https://logrono.zenithoteles.com/es/",
             category: "deportivo"
         },
         // SERVICIOS PROFESIONALES
         {
             name: "Ana Patón",
             logo: "images/sponsors/Ana Paton.jpg",
-            website: "",
+            website: "https://anapatonpilates.es/",
             category: "servicios"
         },
         {
             name: "David Moreno",
             logo: "images/sponsors/DAVID MORENO.png",
-            website: "",
+            website: "https://davidmoreno.es/?srsltid=AfmBOoo6VlNc3GIz5h6xuXzrG-NWybhRQ4YJyYp7FtF2KPtx712yXfbq",
             category: "servicios"
         },
         {
             name: "Martínez Alesanco",
             logo: "images/sponsors/MARTINEZ ALESANCO.jpg",
-            website: "",
+            website: "https://bodegasmartinezalesanco.com/",
             category: "servicios"
         },
         {
             name: "Martínez Solmalo",
             logo: "images/sponsors/Martinez Solmalo.jpg",
-            website: "",
+            website: "https://martinezsomalo.com/es/",
             category: "servicios"
         },
         {
             name: "Gurpegui",
             logo: "images/sponsors/Gurpegui.png",
-            website: "",
+            website: "https://centrodentalgurpegui.com/",
             category: "servicios"
         },
         {
             name: "Habecu",
             logo: "images/sponsors/habecu.png",
-            website: "",
+            website: "https://www.facebook.com/people/Habecu-La-Rioja/100089401037722/#",
             category: "servicios"
         },
         // OTROS SERVICIOS
         {
             name: "AEGC",
             logo: "images/sponsors/AEGC.png",
-            website: "",
+            website: "http://www.aegc.es/",
             category: "asociacion"
         },
         {
             name: "BAQUE",
             logo: "images/sponsors/BAQUE.jpg",
-            website: "",
+            website: "https://www.baque.com/es/",
             category: "servicios"
         },
         {
             name: "El Ángel",
             logo: "images/sponsors/El Angel.png",
-            website: "",
+            website: "https://www.facebook.com/pasteleriayreposteriaangel/?locale=es_ES",
             category: "servicios"
         },
         {
             name: "Fotoadictos",
             logo: "images/sponsors/foto adictos.png",
-            website: "",
+            website: "https://www.fotoadictoslarioja.com/",
             category: "servicios"
         },
         {
             name: "KrAFT",
             logo: "images/sponsors/krAFT.jpg",
-            website: "",
+            website: "https://www.kraftheinz.com/es-ES",
             category: "servicios"
         },
         {
             name: "LogoEPC",
             logo: "images/sponsors/LogoEPC-02.png",
-            website: "",
+            website: "https://www.epc-espana.com/",
             category: "servicios"
         },
         {
             name: "A Marcos",
             logo: "images/sponsors/LOGO-A-MARCOS-VECTOR-SIN-FONDO.png",
-            website: "",
+            website: "https://www.armeriamarcos.es/es/",
             category: "servicios"
         },
         {
             name: "Peñaclara",
             logo: "images/sponsors/peñaclara.jpg",
-            website: "",
+            website: "https://penaclara.es/",
             category: "servicios"
         },
         {
             name: "Taxidermia Arte Decorativo",
             logo: "images/sponsors/Taxidermia arte decorativo.jpg",
-            website: "",
+            website: "https://taxidermiaad.com/",
             category: "servicios"
         },
         {
             name: "Signaai",
             logo: "images/sponsors/signaai.jpg",
-            website: "",
+            website: "https://signaa.es/",
             category: "tecnologia"
         }
     ],
+
+    // ====================================
+    // RACE PHOTOS SECTION
+    // ====================================
+    racePhotos: {
+        title: "Fotos de la Carrera",
+        description: "¡Revive los mejores momentos de nuestra carrera solidaria! Aquí encontrarás todas las fotografías del evento una vez finalizado.",
+        buttonText: "Ver Fotos de la Carrera",
+        note: "Las fotos estarán disponibles después del evento",
+        url: "#", // Update this with the actual photo gallery URL when available
+        isAvailable: false // Set to true when photos are ready and URL is updated
+    },
 
     // ====================================
     // CONTACT INFORMATION
@@ -486,13 +488,12 @@ const CONFIG = {
     shirt: {
         title: "Camiseta Oficial",
         subtitle: "Diseño Conmemorativo de la Carrera",
-        description: "Camiseta técnica oficial de la I Carrera Solidaria Guardia Civil de La Rioja. Incluida en todas las inscripciones.",
-        features: [
-            "Material técnico transpirable",
-            "Diseño conmemorativo exclusivo",
-            "Tallas desde XS hasta XXL",
-            "Incluida en el precio de inscripción"
-        ]
+        description: "Camiseta técnica oficial de la I Carrera Solidaria Guardia Civil de La Rioja. Incluida en todas las inscripciones.\
+                        <br><br>Material técnico transpirable.\
+                        <br>Diseño conmemorativo exclusivo.\
+                        <br>Tallas desde los 4 años hasta XXL.\
+                        <br>Incluida en el precio de inscripción.",
+        features: []
     },
 
     // ====================================
@@ -552,6 +553,12 @@ HOW TO EDIT THIS FILE:
    - Sponsor images should be named descriptively (e.g., guardia-civil.png)
    - The first sponsor (Guardia Civil) appears first, followed by Ayuntamiento de Villamediana
    - Categories help organize sponsors: principal, institucional, deportivo, tecnologia, local, etc.
+
+8. RACE PHOTOS:
+   - Update racePhotos.url with the actual photo gallery URL when available
+   - Set racePhotos.isAvailable to true when photos are ready
+   - Customize the title, description, buttonText, and note as needed
+   - The button will be disabled and grayed out until photos are available
 
 IMPORTANT: 
 - Always use quotes around text values
