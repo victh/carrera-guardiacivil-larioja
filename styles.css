@@ -642,6 +642,83 @@ body {
     color: #1f2937;
 }
 
+/* Race Photos */
+.race-photos {
+    padding: 5rem 0;
+    background: #f8fafc;
+    text-align: center;
+}
+
+.photos-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.photos-description {
+    margin-bottom: 3rem;
+}
+
+.photos-description p {
+    font-size: 1.2rem;
+    color: #4b5563;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+.photos-button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.btn-photos {
+    background: linear-gradient(135deg, #2E7D0A, #1a4a05);
+    color: white;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 12px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(46, 125, 10, 0.3);
+}
+
+.btn-photos:hover {
+    background: linear-gradient(135deg, #1a4a05, #2E7D0A);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(46, 125, 10, 0.4);
+}
+
+.btn-photos i {
+    font-size: 1.2rem;
+}
+
+.photos-note {
+    color: #6b7280;
+    font-size: 0.9rem;
+    font-style: italic;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .photos-content {
+        padding: 0 1rem;
+    }
+    
+    .photos-description p {
+        font-size: 1.1rem;
+    }
+    
+    .btn-photos {
+        padding: 0.875rem 1.5rem;
+        font-size: 1rem;
+    }
+}
+
 /* Contact */
 .contact {
     padding: 5rem 0;

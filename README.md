@@ -234,5 +234,5 @@ This template is free to use for any solidarity run or charity event. Feel free 
 
 **Made with ❤️ for solidarity runs and charity events**
 
-*Last updated: September 2024*
+*Last updated: September 2025*
 

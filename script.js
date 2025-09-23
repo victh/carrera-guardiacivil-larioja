@@ -26,6 +26,7 @@ function initializeWebsite() {
     populateShirt();
     populateGallery();
     populateSponsors();
+    populateRacePhotos();
     populateContact();
     
     // Apply custom colors if set
@@ -145,7 +146,7 @@ function populateShirt() {
     // Update shirt content
     document.getElementById('shirt-title').textContent = CONFIG.shirt.title;
     document.getElementById('shirt-subtitle').textContent = CONFIG.shirt.subtitle;
-    document.getElementById('shirt-description').textContent = CONFIG.shirt.description;
+    document.getElementById('shirt-description').innerHTML = CONFIG.shirt.description;
     
     // Update shirt image
     const shirtImg = document.getElementById('shirt-img');
@@ -266,6 +267,38 @@ function populateSponsors() {
         });
         
         container.appendChild(sponsorsTable);
+    }
+}
+
+function populateRacePhotos() {
+    // Update race photos section content
+    document.getElementById('photos-title').textContent = CONFIG.racePhotos.title;
+    document.getElementById('photos-description').textContent = CONFIG.racePhotos.description;
+    
+    const photosBtn = document.getElementById('photos-btn');
+    const photosNote = document.getElementById('photos-note');
+    
+    // Update button text
+    photosBtn.innerHTML = `<i class="fas fa-camera"></i> ${CONFIG.racePhotos.buttonText}`;
+    
+    // Update button URL and state
+    if (CONFIG.racePhotos.isAvailable && CONFIG.racePhotos.url !== "#") {
+        photosBtn.href = CONFIG.racePhotos.url;
+        photosBtn.target = "_blank"; // Open in new tab for external links
+        photosNote.style.display = "none"; // Hide the "coming soon" note
+    } else {
+        photosBtn.href = "#";
+        photosBtn.style.opacity = "0.7";
+        photosBtn.style.cursor = "not-allowed";
+        photosNote.textContent = CONFIG.racePhotos.note;
+        
+        // Prevent clicking when not available
+        photosBtn.addEventListener('click', function(e) {
+            if (!CONFIG.racePhotos.isAvailable || CONFIG.racePhotos.url === "#") {
+                e.preventDefault();
+                return false;
+            }
+        });
     }
 }
 
