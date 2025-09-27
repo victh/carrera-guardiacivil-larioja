@@ -309,9 +309,9 @@ function populateContact() {
     
     // Update social media links
     const socialLinks = document.querySelectorAll('.social-link');
-    socialLinks[0].href = CONFIG.contact.socialMedia.facebook || '#';
-    socialLinks[1].href = CONFIG.contact.socialMedia.twitter || '#';
-    socialLinks[2].href = CONFIG.contact.socialMedia.instagram || '#';
+    if (socialLinks[0]) socialLinks[0].href = CONFIG.contact.socialMedia.facebook || '#';
+    if (socialLinks[1]) socialLinks[1].href = CONFIG.contact.socialMedia.twitter || '#';
+    if (socialLinks[2]) socialLinks[2].href = CONFIG.contact.socialMedia.instagram || '#';
 }
 
 // ====================================
