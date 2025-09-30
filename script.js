@@ -28,6 +28,7 @@ function initializeWebsite() {
     populateSponsors();
     populateRacePhotos();
     populateContact();
+    populateCartelImage();
     
     // Apply custom colors if set
     applyCustomColors();
@@ -312,6 +313,13 @@ function populateContact() {
     if (socialLinks[0]) socialLinks[0].href = CONFIG.contact.socialMedia.facebook || '#';
     if (socialLinks[1]) socialLinks[1].href = CONFIG.contact.socialMedia.twitter || '#';
     if (socialLinks[2]) socialLinks[2].href = CONFIG.contact.socialMedia.instagram || '#';
+}
+
+function populateCartelImage() {
+    const cartelImg = document.getElementById('cartel-img');
+    if (cartelImg) {
+        cartelImg.src = CONFIG.images.cartelImage;
+    }
 }
 
 // ====================================

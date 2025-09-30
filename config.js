@@ -472,6 +472,7 @@ const CONFIG = {
         heroImage: "images/hero-image.jpg",
         objectiveImage: "images/objective-image.jpg",
         shirtImage: "images/camiseta.png", // Official race t-shirt image
+        cartelImage: "images/cartel.jpg", // Event poster image
         // Add more image paths as needed
         galleryImages: [
             "images/gallery1.png",
