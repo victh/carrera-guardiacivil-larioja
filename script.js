@@ -307,12 +307,12 @@ function populateContact() {
     document.getElementById('contact-email').textContent = CONFIG.contact.email;
     document.getElementById('contact-phone').textContent = CONFIG.contact.phone;
     document.getElementById('contact-address').textContent = CONFIG.contact.address;
-    
+        
     // Update social media links
-    const socialLinks = document.querySelectorAll('.social-link');
-    if (socialLinks[0]) socialLinks[0].href = CONFIG.contact.socialMedia.facebook || '#';
-    if (socialLinks[1]) socialLinks[1].href = CONFIG.contact.socialMedia.twitter || '#';
-    if (socialLinks[2]) socialLinks[2].href = CONFIG.contact.socialMedia.instagram || '#';
+    //const socialLinks = document.querySelectorAll('.social-link');
+    //if (socialLinks[0]) socialLinks[0].href = CONFIG.contact.socialMedia.facebook || '#';
+    //if (socialLinks[1]) socialLinks[1].href = CONFIG.contact.socialMedia.twitter || '#';
+    //if (socialLinks[2]) socialLinks[2].href = CONFIG.contact.socialMedia.instagram || 'https://www.instagram.com/gc_carrera_popular_la_rioja/';
 }
 
 function populateCartelImage() {
