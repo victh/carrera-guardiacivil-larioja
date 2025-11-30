@@ -448,8 +448,8 @@ const CONFIG = {
         description: "¡Revive los mejores momentos de nuestra carrera solidaria! Aquí encontrarás todas las fotografías del evento una vez finalizado.",
         buttonText: "Ver Fotos de la Carrera",
         note: "Las fotos estarán disponibles después del evento",
-        url: "#", // Update this with the actual photo gallery URL when available
-        isAvailable: false // Set to true when photos are ready and URL is updated
+        url: "https://www.fotoadictoslarioja.com/i-carrera-solidaria-guardia-civil-la-rioja-por-el-autismo", // Update this with the actual photo gallery URL when available
+        isAvailable: true // Set to true when photos are ready and URL is updated
     },
 
     // ====================================
