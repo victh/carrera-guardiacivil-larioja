@@ -1,6 +1,6 @@
-# Carrera Solidaria Website
+# II Carrera Solidaria Guardia Civil La Rioja
 
-A simple, modern, and easily customizable website template for solidarity runs and charity events.
+Web de la II Carrera Solidaria Guardia Civil La Rioja, que se celebrará en Haro el 15 de noviembre de 2026 a favor de la Asociación Riojana de Esclerosis Múltiple (ARDEM).
 
 ## 🚀 Quick Start
 
@@ -19,11 +19,24 @@ Runweb/
 ├── config.js           # ⭐ EDIT THIS FILE with your event info
 ├── README.md           # This documentation
 └── images/             # 📁 Place your images here
-    ├── logo.png        # Your event logo
-    ├── hero-image.jpg  # Main banner image
-    ├── objective-image.jpg  # Cause/objective image
-    └── sponsor*.png    # Sponsor logos
+    ├── sponsors/
+    │   ├── 2025/       # Sponsor logos from the previous edition
+    │   └── 2026/       # Sponsor logos from the current edition
+    └── 2026/           # Current-edition logo, bib, apparel and poster
 ```
+
+## Edición 2026
+
+La información publicada en la web se contrasta con la [ficha del evento en RockTheSport](https://www.rockthesport.com/es/evento/ii-carrera-guardia-civil-la-rioja).
+
+- **Lugar:** Aparcamiento del Polideportivo Mazo, Haro (La Rioja).
+- **Horario general:** de 9:00 a 18:00; el programa de actividades comienza a las 10:00.
+- **Carreras y caminata:** 500 m a las 11:00, 1 km a las 11:15, carrera de 6 km a las 12:00 y caminata a las 12:01.
+- **Tarifas:** 6 km y caminata, 10 €; 1 km y 500 m, 8 €; camiseta solidaria, 10 €; dorsal solidario, donación libre o de 5 €, 10 €, 20 € o 50 €.
+- **Patrocinadores:** los logotipos están separados por edición en `images/sponsors/2025/` e `images/sponsors/2026/`.
+- **Material del evento:** las imágenes de cartel, logo, dorsal, camiseta y bolsa están en `images/2026/`.
+
+El programa completo, las tarifas y las inscripciones pueden cambiar; consulta la ficha oficial antes de acudir.
 
 ## ✏️ How to Customize Your Website
 
@@ -33,12 +46,12 @@ Open `config.js` and edit the `event` section:
 
 ```javascript
 event: {
-    title: "Your Race Name",
-    subtitle: "Your Slogan",
-    description: "Description of your event",
-    date: "Sunday, October 15, 2024",
-    location: "Your Location",
-    time: "9:00 AM"
+    title: "II Carrera Solidaria Guardia Civil La Rioja",
+    subtitle: "Deporte y solidaridad en Haro",
+    description: "Corre o camina a favor de ARDEM",
+    date: "Domingo, 15 de noviembre de 2026",
+    location: "Aparcamiento del Polideportivo Mazo, Haro",
+    time: "9:00–18:00"
 }
 ```
 
@@ -49,12 +62,12 @@ Edit the `distances` array:
 ```javascript
 distances: [
     {
-        distance: "5KM",
-        category: "Adults",
-        time: "10:00h",
-        description: "Main race"
-    }
-    // Add more distances...
+        distance: "6 km",
+        category: "Carrera",
+        time: "12:00",
+        description: "Salida de la carrera de 6 km."
+    },
+    // See config.js for all race and walk start times.
 ]
 ```
 
@@ -65,12 +78,12 @@ Update the `pricing` section:
 ```javascript
 pricing: [
     {
-        category: "Adult Registration",
-        price: "15€",
-        description: "Includes t-shirt and bib",
-        featured: true  // This will be highlighted
-    }
-    // Add more pricing options...
+        category: "Carrera 6 km",
+        price: "10 €",
+        description: "Inscripción para la carrera de 6 km.",
+        featured: false
+    },
+    // See config.js for all registration and donation options.
 ]
 ```
 
@@ -80,14 +93,9 @@ Update your contact details:
 
 ```javascript
 contact: {
-    email: "your-email@example.com",
-    phone: "+34 123 456 789",
-    address: "Your Address",
-    socialMedia: {
-        facebook: "https://facebook.com/yourpage",
-        twitter: "https://twitter.com/yourhandle",
-        instagram: "https://instagram.com/yourhandle"
-    }
+    organizer: "10.ª Zona de la Guardia Civil de La Rioja",
+    phone: "+34 941 22 99 00",
+    instagram: "https://instagram.com/gc_carrera_popular_la_rioja/"
 }
 ```
 
@@ -97,20 +105,21 @@ Edit the `objective` section:
 
 ```javascript
 objective: {
-    description: "Description of your cause...",
-    beneficiaryOrg: "Name of Beneficiary Organization"
+    description: "La recaudación de esta edición se destina a apoyar a ARDEM.",
+    beneficiaryOrg: "Asociación Riojana de Esclerosis Múltiple (ARDEM)"
 }
 ```
 
 ## 🖼️ Adding Images
 
-### Required Images:
-1. **logo.png** (200x80px recommended) - Your event logo
-2. **hero-image.jpg** (1200x600px recommended) - Main banner image
-3. **objective-image.jpg** (600x400px recommended) - Image representing your cause
+### Current Edition Images:
+- **images/2026/logo-carrera-2026.jpeg** - Event logo
+- **images/2026/cartel-carrera-2026.jpeg** - Event poster
+- **images/2026/** - Current-edition shirt, bib and bag images
 
 ### Optional Images:
-- **sponsor*.png** - Sponsor logos
+- **images/sponsors/<year>/** - Sponsor logos organized by edition
+- **images/2026/** - Current-edition logo, bib, apparel and poster
 - **gallery*.jpg** - Photo gallery images
 
 ### How to Add Images:
@@ -137,7 +146,6 @@ Use any hex color code (like #ff0000 for red, #00ff00 for green, etc.)
 - ✅ **Fully Responsive** - Works on mobile, tablet, and desktop
 - ✅ **Modern Design** - Clean and professional appearance
 - ✅ **Easy to Edit** - All content in one config file
-- ✅ **Contact Form** - Built-in contact form
 - ✅ **Registration System Ready** - Easy to connect to registration platforms
 - ✅ **Payment Integration Ready** - Easy to connect to payment systems
 - ✅ **Social Media Integration** - Links to your social media
@@ -176,16 +184,6 @@ function handleDonation(amount) {
 }
 ```
 
-## 📧 Contact Form Setup
-
-The contact form is ready to use but needs backend integration. You can:
-
-1. **Use a form service** like Formspree, Netlify Forms, or Google Forms
-2. **Set up your own server** to handle form submissions
-3. **Use email integration** services
-
-To integrate, edit the `handleContactForm` function in `script.js`.
-
 ## 🌐 Publishing Your Website
 
 ### Option 1: Simple Hosting (Recommended for beginners)
@@ -214,10 +212,6 @@ To integrate, edit the `handleContactForm` function in `script.js`.
 - Open browser developer tools (F12) to see error messages
 - Make sure `config.js` has proper syntax (commas, quotes, etc.)
 
-### Contact Form Not Working?
-- The form needs backend integration to actually send emails
-- For testing, it will show a success message but won't send real emails
-
 ## 📞 Support
 
 If you need help:
@@ -234,5 +228,4 @@ This template is free to use for any solidarity run or charity event. Feel free 
 
 **Made with ❤️ for solidarity runs and charity events**
 
-*Last updated: September 2025*
-
+*Última actualización: noviembre de 2026*

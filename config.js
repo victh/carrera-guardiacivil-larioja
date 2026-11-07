@@ -9,23 +9,20 @@ const CONFIG = {
     // BASIC EVENT INFORMATION
     // ====================================
     event: {
-        title: "I Carrera Solidaria Guardia Civil de La Rioja",
-        subtitle: "Corremos a favor de ARPA Autismo Rioja",
-        description: "Únete a nosotros en esta carrera solidaria para apoyar a ARPA Autismo Rioja",
-        date: "Domingo, 16 de noviembre de 2025",
-        location: "Polideportivo Municipal de Villamediana de Iregua, Calle Portillo",
-        time: "11:00h",
-        maxTimeLimit: "1 hora y 30 minutos" // Maximum time to complete the race
+        title: "II Carrera Solidaria Guardia Civil La Rioja",
+        subtitle: "Deporte y solidaridad en Haro",
+        description: "Corre o camina el 15 de noviembre y colabora con la Asociación Riojana de Esclerosis Múltiple (ARDEM).",
+        date: "Domingo, 15 de noviembre de 2026",
+        location: "Aparcamiento del Polideportivo Mazo, Haro (La Rioja)",
+        time: "9:00–18:00 (actividades desde las 10:00)"
     },
 
     // ====================================
     // SOLIDARITY OBJECTIVE
     // ====================================
     objective: {
-        description: `El evento tiene como finalidad apoyar a ARPA Autismo Rioja, asociación sin ánimo de lucro que trabaja incansablemente en la defensa de los derechos de las personas con Trastorno del Espectro Autista (TEA) y sus familias, gestionando servicios especializados y promoviendo su inclusión social y educativa.`,
-        beneficiaryOrg: "ARPA Autismo Rioja",
-        // You can add more details about the cause here
-        causeDetails: "ARPA Autismo Rioja es una organización que ayuda a los niños con autismo y sus familias. Ayudamos a los niños con autismo a desarrollar sus habilidades y a sus familias a entender mejor el autismo."
+        description: "La recaudación de esta edición se destina a apoyar a la Asociación Riojana de Esclerosis Múltiple (ARDEM).",
+        beneficiaryOrg: "Asociación Riojana de Esclerosis Múltiple (ARDEM)"
     },
 
     // ====================================
@@ -33,34 +30,28 @@ const CONFIG = {
     // ====================================
     distances: [
         {
-            distance: "500M",
-            category: "Niños (2017-2021)",
+            distance: "500 m",
+            category: "Carrera",
             time: "11:00",
-            description: "Carrera no clasificatoria para los más pequeños. Obsequio para todos los participantes"
+            description: "Salida de la carrera de 500 m."
         },
         {
-            distance: "1KM",
-            category: "Niños (2013-2016)",
-            time: "11:10",
-            description: "Carrera no clasificatoria para niños. Obsequio para todos los participantes"
+            distance: "1 km",
+            category: "Carrera",
+            time: "11:15",
+            description: "Salida de la carrera de 1 km."
         },
         {
-            distance: "2KM",
-            category: "Juvenil (2010-2012)",
-            time: "11:20",
-            description: "Dorsal con chip y trofeo para los 3 primeros clasificados (categorías masculina y femenina)"
-        },
-        {
-            distance: "6KM",
-            category: "Carrera popular (hasta 2009)",
+            distance: "6 km",
+            category: "Carrera",
             time: "12:00",
-            description: "Dorsal con chip y trofeo para los 3 primeros clasificados (categorías masculina y femenina)"
+            description: "Salida de la carrera de 6 km."
         },
         {
-            distance: "6KM",
-            category: "Caminata (todas las edades)",
-            time: "12:10",
-            description: "Caminata solidaria. Tiempo máximo para finalizar la caminata 1:30h"
+            distance: "6 km",
+            category: "Caminata",
+            time: "12:01",
+            description: "Salida de la caminata solidaria."
         }
     ],
 
@@ -69,10 +60,9 @@ const CONFIG = {
     // ====================================
     registration: {
         status: "open", // "open", "closed", "sold_out"
-        statusTitle: "¡Inscripciones Abiertas!",
-        statusText: "Inscríbete ahora y forma parte de esta causa solidaria. Abierto hasta el 8 de noviembre de 2025 o hasta agotar dorsales.",
-        registrationUrl: "#precios", // Link to registration or external URL
-        note: "Las inscripciones se cerrarán el día anterior al evento o al agotarse los dorsales"
+        statusTitle: "¡Inscripciones abiertas!",
+        statusText: "Inscríbete hasta el 8 de noviembre de 2026 a las 23:59 en RockTheSport.",
+        registrationUrl: "https://www.rockthesport.com/es/evento/ii-carrera-guardia-civil-la-rioja"
     },
 
     // ====================================
@@ -80,21 +70,63 @@ const CONFIG = {
     // ====================================
     pricing: [
         {
-            category: "6KM y Caminata 6KM",
-            price: "13€",
-            description: "Incluye camiseta, dorsal con chip y bolsa del corredor",
-            featured: true // This will be highlighted
-        },
-        {
-            category: "Distancias menores",
-            price: "10€",
-            description: "2KM, 1KM, 500M - Incluye camiseta, dorsal (con chip en la carrera Juvenil 2KM) y bolsa del corredor",
+            category: "Carrera 6 km",
+            price: "10 €",
+            description: "Inscripción para la carrera de 6 km.",
             featured: false
         },
         {
-            category: "Dorsal Solidario",
-            price: "13€/50€/100€",
-            description: "Para quienes no pueden participar pero quieren colaborar",
+            category: "Carrera 1 km",
+            price: "8 €",
+            description: "Inscripción para la carrera de 1 km.",
+            featured: false
+        },
+        {
+            category: "Carrera 500 m",
+            price: "8 €",
+            description: "Inscripción para la carrera de 500 m.",
+            featured: false
+        },
+        {
+            category: "Caminata",
+            price: "10 €",
+            description: "Inscripción para la caminata solidaria de 6 km.",
+            featured: false
+        },
+        {
+            category: "Camiseta solidaria",
+            price: "10 €",
+            description: "La plataforma ofrece la camiseta solidaria como opción de inscripción.",
+            featured: false
+        },
+        {
+            category: "Dorsal solidario",
+            price: "Donación",
+            description: "Aportación solidaria de importe libre.",
+            featured: false
+        },
+        {
+            category: "Dorsal solidario (5 €)",
+            price: "5 €",
+            description: "Donación solidaria.",
+            featured: false
+        },
+        {
+            category: "Dorsal solidario (10 €)",
+            price: "10 €",
+            description: "Donación solidaria.",
+            featured: false
+        },
+        {
+            category: "Dorsal solidario (20 €)",
+            price: "20 €",
+            description: "Donación solidaria.",
+            featured: false
+        },
+        {
+            category: "Dorsal solidario (50 €)",
+            price: "50 €",
+            description: "Donación solidaria.",
             featured: false
         }
     ],
@@ -104,21 +136,27 @@ const CONFIG = {
     // ====================================
     awards: [
         {
-            category: "500M y 1KM",
-            prize: "Obsequio",
-            description: "Para todos los participantes, carrera no clasificatoria",
-            icon: "fas fa-gift"
+            category: "10:00",
+            prize: "Inicio del evento",
+            description: "Hinchables y exposición de medios.",
+            icon: "fas fa-flag-checkered"
         },
         {
-            category: "2KM y 6KM",
-            prize: "Trofeos",
-            description: "Para los tres primeros clasificados (masculino y femenino)",
-            icon: "fas fa-trophy"
+            category: "12:30",
+            prize: "Degustación solidaria",
+            description: "Comienzo de la degustación solidaria.",
+            icon: "fas fa-utensils"
         },
         {
-            category: "Menciones Especiales",
-            prize: "Reconocimiento",
-            description: "Primer ganador masculino y femenino de las FFCCSE",
+            category: "13:00",
+            prize: "Sorteo",
+            description: "Publicación de los ganadores del sorteo.",
+            icon: "fas fa-ticket-alt"
+        },
+        {
+            category: "13:15",
+            prize: "Entrega de premios",
+            description: "Entrega de premios de las pruebas.",
             icon: "fas fa-award"
         }
     ],
@@ -128,373 +166,408 @@ const CONFIG = {
     // ====================================
     services: [
         {
-            name: "Vestuarios y Duchas",
-            description: "Vestuarios y duchas disponibles",
-            icon: "fas fa-shower"
-        },
-        {
-            name: "Bolsa del Corredor",
-            description: "Para todos los participantes al recoger el dorsal",
+            name: "Hinchables y talleres",
+            description: "Actividades infantiles anunciadas para el evento.",
             icon: "fas fa-gift"
         },
         {
-            name: "Música",
-            description: "Animación musical en salida y meta",
+            name: "Exposición de medios",
+            description: "Exposición de medios de la Guardia Civil.",
+            icon: "fas fa-shield-alt"
+        },
+        {
+            name: "Ambiente musical",
+            description: "Animación musical durante la jornada.",
             icon: "fas fa-music"
         },
         {
-            name: "Medición de Tiempos",
-            description: "Con chip para 2K y 6K",
-            icon: "fas fa-stopwatch"
-        },
-        {
             name: "Degustaciones",
-            description: "Degustación solidaria al finalizar la carrera",
+            description: "Degustación solidaria prevista a las 12:30.",
             icon: "fas fa-utensils"
-        },
-        {
-            name: "Camiseta Conmemorativa",
-            description: "Para todos los participantes inscritos",
-            icon: "fas fa-tshirt"
-        },
-        {
-            name: "Exposición de medios",
-            description: "Exposición de medios de la Guardia Civil",
-            icon: "fas fa-newspaper"
-        },
-        {
-            name: "Animación infantil",
-            description: "Hinchables, talleres...",
-            icon: "fas fa-child"
         }
     ],
 
     // ====================================
-    // SPONSORS INFORMATION
+    // 2025 SPONSORS - RETAINED AS A HISTORICAL ARCHIVE
     // ====================================
-    sponsors: [
+    sponsors2025: [
         // PATROCINADOR PRINCIPAL
         {
             name: "Guardia Civil La Rioja",
-            logo: "images/sponsors/Coat_of_Arms_of_the_10th_Zone_of_the_Guardia_Civil_-_La_Rioja.svg.png",
+            logo: "images/sponsors/2025/Coat_of_Arms_of_the_10th_Zone_of_the_Guardia_Civil_-_La_Rioja.svg.png",
             website: "https://www.guardiacivil.es",
             category: "principal"
         },
         // AYUNTAMIENTO (SEGUNDO)
         {
             name: "Ayuntamiento de Villamediana",
-            logo: "images/sponsors/Ayuntamiento.jpg",
+            logo: "images/sponsors/2025/Ayuntamiento.jpg",
             website: "https://www.villamedianadeiregua.org/",
             category: "institucional"
         },
         // ORGANIZACIÓN BENEFICIARIA
         {
             name: "ARPA Autismo Rioja",
-            logo: "images/sponsors/arpa-todos.png",
+            logo: "images/sponsors/2025/arpa-todos.png",
             website: "https://autismorioja.com/",
             category: "beneficiario"
         },
         // BANCOS Y FINANCIERAS
         {
             name: "CaixaBank",
-            logo: "images/sponsors/CAIXABANK.png",
+            logo: "images/sponsors/2025/CAIXABANK.png",
             website: "https://www.caixabank.es",
             category: "financiero"
         },
         // SUPERMERCADOS Y COMERCIO
         {
             name: "Alcampo",
-            logo: "images/sponsors/Alcampo.png",
+            logo: "images/sponsors/2025/Alcampo.png",
             website: "https://www.alcampo.es",
             category: "comercio"
         },
         {
             name: "Carrefour Express",
-            logo: "images/sponsors/carrefour-express-1200x1424.jpg",
+            logo: "images/sponsors/2025/carrefour-express-1200x1424.jpg",
             website: "https://www.carrefour.es",
             category: "comercio"
         },
         // BODEGAS Y ALIMENTACIÓN
         {
             name: "Bodegas Marqués de Cáceres",
-            logo: "images/sponsors/MArques de Caceres.png",
+            logo: "images/sponsors/2025/MArques de Caceres.png",
             website: "https://www.marquesdecaceres.com/",
             category: "alimentacion"
         },
         {
             name: "Bodegas Lecea",
-            logo: "images/sponsors/Bodegas lecea.jpg",
+            logo: "images/sponsors/2025/Bodegas lecea.jpg",
             website: "https://www.bodegaslecea.com/",
             category: "alimentacion"
         },
         {
             name: "Vivanco",
-            logo: "images/sponsors/Vivanco.png",
+            logo: "images/sponsors/2025/Vivanco.png",
             website: "https://vivancoculturadevino.es/es/",
             category: "alimentacion"
         },
         {
             name: "Mazapanes Soto",
-            logo: "images/sponsors/MAzapanes soto.png",
+            logo: "images/sponsors/2025/MAzapanes soto.png",
             website: "https://www.mazapanesdesotosegura.es/",
             category: "alimentacion"
         },
         {
             name: "Peras Rincón",
-            logo: "images/sponsors/Peras rincon.jpg",
+            logo: "images/sponsors/2025/Peras rincon.jpg",
             website: "https://www.perasderincondesoto.com/",
             category: "alimentacion"
         },
         {
             name: "Coca Cola",
-            logo: "images/sponsors/logo-coca-cola-onda-dinamica.jpg",
+            logo: "images/sponsors/2025/logo-coca-cola-onda-dinamica.jpg",
             website: "https://www.cocacola.es",
             category: "alimentacion"
         },
         // AUTOMOCIÓN
         {
             name: "VW Rioja Motor",
-            logo: "images/sponsors/LOGO VW RIOJA MOTOR.jpg",
+            logo: "images/sponsors/2025/LOGO VW RIOJA MOTOR.jpg",
             website: "https://riojamotor.com/",
             category: "automocion"
         },
         {
             name: "Gasolinera Jubera",
-            logo: "images/sponsors/Gasolinera jubera.jpg",
+            logo: "images/sponsors/2025/Gasolinera jubera.jpg",
             website: "https://gasoleosjubera.es/",
             category: "automocion"
         },
         // TECNOLOGÍA Y SERVICIOS
         {
             name: "Genergy",
-            logo: "images/sponsors/genergy.jpg",
+            logo: "images/sponsors/2025/genergy.jpg",
             website: "https://genergy.es/?gad_source=1&gad_campaignid=7850189750&gbraid=0AAAAAD4MjHDCdNs0SsTvqlCVUvMp73w_j&gclid=Cj0KCQjw8KrFBhDUARIsAMvIApaasOCupFTYO9Inp75zs2duxD2eJjXaeN9O0edUAFR1WKeYpLuJLXYaArOMEALw_wcB",
             category: "tecnologia"
         },
         {
             name: "Centro Tecnológico Champiñón",
-            logo: "images/sponsors/Centro tecnologico champi.jpeg",
+            logo: "images/sponsors/2025/Centro tecnologico champi.jpeg",
             website: "https://ctich.com/",
             category: "tecnologia"
         },
         {
             name: "Signaai",
-            logo: "images/sponsors/signaai.jpg",
+            logo: "images/sponsors/2025/signaai.jpg",
             website: "https://signaai.com",
             category: "tecnologia"
         },
         {
             name: "RECIRSA",
-            logo: "images/sponsors/RECIRSA.jpg",
+            logo: "images/sponsors/2025/RECIRSA.jpg",
             website: "https://www.recirsa.com/",
             category: "servicios"
         },
         // SALUD Y BIENESTAR
         {
             name: "Doctor Toledo",
-            logo: "images/sponsors/Doctor Toledo.png",
+            logo: "images/sponsors/2025/Doctor Toledo.png",
             website: "https://doctortoledo.es/",
             category: "salud"
         },
         {
             name: "Rioja Cuida",
-            logo: "images/sponsors/Rioja Cuida.png",
+            logo: "images/sponsors/2025/Rioja Cuida.png",
             website: "https://bi.larioja.org/pentaho/lariojacuida/",
             category: "salud"
         },
         {
             name: "Sirona",
-            logo: "images/sponsors/Sirona.png",
+            logo: "images/sponsors/2025/Sirona.png",
             website: "https://www.instagram.com/sironafisio/",
             category: "salud"
         },
         // EDUCACIÓN
         {
             name: "UNIR - Universidad Internacional de La Rioja",
-            logo: "images/sponsors/LARIOJA_H_color_300.png",
+            logo: "images/sponsors/2025/LARIOJA_H_color_300.png",
             website: "https://www.unir.net",
             category: "educacion"
         },
         // DEPORTES Y OCIO
         {
             name: "Club Coloma",
-            logo: "images/sponsors/Club Coloma.jpeg",
+            logo: "images/sponsors/2025/Club Coloma.jpeg",
             website: "https://colomabikeclub.com/",
             category: "deportivo"
         },
         {
             name: "Biciván",
-            logo: "images/sponsors/LOGO BICIVÁN TRAZADO.jpg",
+            logo: "images/sponsors/2025/LOGO BICIVÁN TRAZADO.jpg",
             website: "https://bicivan.com/",
             category: "deportivo"
         },
         {
             name: "Calle Activa",
-            logo: "images/sponsors/calle-activa.png",
+            logo: "images/sponsors/2025/calle-activa.png",
             website: "https://www.calleactiva.es/",
             category: "deportivo"
         },
         {
             name: "Zenit",
-            logo: "images/sponsors/Zenit.jpg",
+            logo: "images/sponsors/2025/Zenit.jpg",
             website: "https://logrono.zenithoteles.com/es/",
             category: "deportivo"
         },
         // SERVICIOS PROFESIONALES
         {
             name: "Ana Patón",
-            logo: "images/sponsors/Ana Paton.jpg",
+            logo: "images/sponsors/2025/Ana Paton.jpg",
             website: "https://anapatonpilates.es/",
             category: "servicios"
         },
         {
             name: "David Moreno",
-            logo: "images/sponsors/DAVID MORENO.png",
+            logo: "images/sponsors/2025/DAVID MORENO.png",
             website: "https://davidmoreno.es/?srsltid=AfmBOoo6VlNc3GIz5h6xuXzrG-NWybhRQ4YJyYp7FtF2KPtx712yXfbq",
             category: "servicios"
         },
         {
             name: "Martínez Alesanco",
-            logo: "images/sponsors/MARTINEZ ALESANCO.jpg",
+            logo: "images/sponsors/2025/MARTINEZ ALESANCO.jpg",
             website: "https://bodegasmartinezalesanco.com/",
             category: "servicios"
         },
         {
             name: "Martínez Solmalo",
-            logo: "images/sponsors/Martinez Solmalo.jpg",
+            logo: "images/sponsors/2025/Martinez Solmalo.jpg",
             website: "https://martinezsomalo.com/es/",
             category: "servicios"
         },
         {
             name: "Gurpegui",
-            logo: "images/sponsors/Gurpegui.png",
+            logo: "images/sponsors/2025/Gurpegui.png",
             website: "https://centrodentalgurpegui.com/",
             category: "servicios"
         },
         {
             name: "Habecu",
-            logo: "images/sponsors/habecu.png",
+            logo: "images/sponsors/2025/habecu.png",
             website: "https://www.facebook.com/people/Habecu-La-Rioja/100089401037722/#",
             category: "servicios"
         },
         // OTROS SERVICIOS
         {
             name: "AEGC",
-            logo: "images/sponsors/AEGC.png",
+            logo: "images/sponsors/2025/AEGC.png",
             website: "http://www.aegc.es/",
             category: "asociacion"
         },
         {
             name: "BAQUE",
-            logo: "images/sponsors/BAQUE.jpg",
+            logo: "images/sponsors/2025/BAQUE.jpg",
             website: "https://www.baque.com/es/",
             category: "servicios"
         },
         {
             name: "El Ángel",
-            logo: "images/sponsors/El Angel.png",
+            logo: "images/sponsors/2025/El Angel.png",
             website: "https://www.facebook.com/pasteleriayreposteriaangel/?locale=es_ES",
             category: "servicios"
         },
         {
             name: "Fotoadictos",
-            logo: "images/sponsors/foto adictos.png",
+            logo: "images/sponsors/2025/foto adictos.png",
             website: "https://www.fotoadictoslarioja.com/",
             category: "servicios"
         },
         {
             name: "KrAFT",
-            logo: "images/sponsors/krAFT.jpg",
+            logo: "images/sponsors/2025/krAFT.jpg",
             website: "https://www.kraftheinz.com/es-ES",
             category: "servicios"
         },
         {
             name: "LogoEPC",
-            logo: "images/sponsors/LogoEPC-02.png",
+            logo: "images/sponsors/2025/LogoEPC-02.png",
             website: "https://www.epc-espana.com/",
             category: "servicios"
         },
         {
             name: "A Marcos",
-            logo: "images/sponsors/LOGO-A-MARCOS-VECTOR-SIN-FONDO.png",
+            logo: "images/sponsors/2025/LOGO-A-MARCOS-VECTOR-SIN-FONDO.png",
             website: "https://www.armeriamarcos.es/es/",
             category: "servicios"
         },
         {
             name: "Peñaclara",
-            logo: "images/sponsors/peñaclara.jpg",
+            logo: "images/sponsors/2025/peñaclara.jpg",
             website: "https://penaclara.es/",
             category: "servicios"
         },
         {
             name: "Taxidermia Arte Decorativo",
-            logo: "images/sponsors/Taxidermia arte decorativo.jpg",
+            logo: "images/sponsors/2025/Taxidermia arte decorativo.jpg",
             website: "https://taxidermiaad.com/",
             category: "servicios"
         },
         {
             name: "Signaai",
-            logo: "images/sponsors/signaai.jpg",
+            logo: "images/sponsors/2025/signaai.jpg",
             website: "https://signaa.es/",
             category: "tecnologia"
         }
     ],
 
+    // 2026 SPONSOR LOGOS - names are not published in the event listing
+    sponsors: [
+        "sponsor-2026-01-deb6936c-3a14-43e1-89d8-81edd86b94c9.png",
+        "sponsor-2026-02-762194f6-a2dd-443a-bfc1-c7a73dcbf831.jpg",
+        "sponsor-2026-03-f43cb3db-83df-467a-ae97-db9acdc3f456.png",
+        "sponsor-2026-04-1d31107a-2fe7-4e84-be8a-e56e374710fd.jpg",
+        "sponsor-2026-05-91812f9f-78e5-4bb9-962e-0caa1b21eb23.jpg",
+        "sponsor-2026-06-8b064551-0358-406f-818d-54f54f063b2f.jpg",
+        "sponsor-2026-07-1ba99a65-89ab-4271-b01d-7e7bf2b1d8a8.png",
+        "sponsor-2026-08-666c1364-7d70-4b00-ab4a-994cdd91a31e.png",
+        "sponsor-2026-09-2d6d9a37-a6de-4351-8f67-87cba1f229b6.png",
+        "sponsor-2026-10-bdf1ce7b-cafe-43d1-98a6-d463c5dba4db.png",
+        "sponsor-2026-11-f3d0db14-2b4a-41a1-88af-5615c342840e.png",
+        "sponsor-2026-12-d762050a-a1ef-421f-bddd-2dece2d660d3.jpg",
+        "sponsor-2026-13-9a8fae7c-7326-46ec-9179-2da0da239548.jpg",
+        "sponsor-2026-14-43c437a7-51ec-4f56-9532-455d92a35e86.jpg",
+        "sponsor-2026-15-e6899c9e-95db-4a81-8ec8-adddf548145b.jpg",
+        "sponsor-2026-16-64df616b-af38-40ed-8dac-0d6c35db43c5.jpg",
+        "sponsor-2026-17-8d802a4b-5b54-45a1-8024-47e13d40d904.jpg",
+        "sponsor-2026-18-0e98962c-ebb4-49b9-8c40-e13deae3d12e.jpg",
+        "sponsor-2026-19-05f8c96a-3105-4078-ba23-b9b8f36e0443.jpg",
+        "sponsor-2026-20-f8fdc4f0-6d63-4e4e-ae62-7bbc12e37d0d.png",
+        "sponsor-2026-21-8c283c85-510b-406e-b6c7-c3d2bf73f38f.jpg",
+        "sponsor-2026-22-3aa293a0-856f-43e6-a61c-8ccecc715f23.png",
+        "sponsor-2026-23-b48ee4eb-6263-41fd-a464-45b32f10a3ea.jpg",
+        "sponsor-2026-24-f8dcc09c-6819-4ff1-8f73-ea52a32ee0ad.jpg",
+        "sponsor-2026-25-5b89219d-87e6-4406-b9ee-4c5db26189cf.jpg",
+        "sponsor-2026-26-a9c21fd1-df9a-4945-a235-2218705238c5.png",
+        "sponsor-2026-27-9d2ebf6d-2831-4650-bc1c-78f45b448b82.png",
+        "sponsor-2026-28-9cfb44c7-ab6e-49a7-a10f-b462f0890102.jpeg",
+        "sponsor-2026-29-73c1b494-3797-4892-99be-460579849e64.png",
+        "sponsor-2026-30-cfcd3c9b-2050-4f24-9073-ce843c27e2a5.jpg",
+        "sponsor-2026-31-6d04a388-0119-45c7-904f-b9bbbe596fd3.png",
+        "sponsor-2026-32-e8674267-a1b7-405c-b643-946b4ebc454d.png",
+        "sponsor-2026-33-a3520cca-20cf-4b6e-9db4-e3ab0efc606d.png",
+        "sponsor-2026-34-5dc98b66-8e35-416f-9282-413e88540957.jpeg",
+        "sponsor-2026-35-4df65ed8-8f1f-425c-afd5-579ce470ee3f.jpg",
+        "sponsor-2026-36-d7e29676-9882-45ed-969a-9f7f14365fea.png",
+        "sponsor-2026-37-5acf6e84-d093-4e84-a950-a388902ad591.png",
+        "sponsor-2026-38-c3b53d14-3dc5-4f22-b923-2ed78ed8e338.png",
+        "sponsor-2026-39-0f5bd565-0403-446d-93ff-922fe8074083.png",
+        "sponsor-2026-40-17520246-e3c6-4832-b1a6-08c7074cc6a9.png",
+        "sponsor-2026-41-25640d19-bd24-47d2-8072-175dde76e5de.jpg",
+        "sponsor-2026-42-07058f85-92e2-429c-a409-83a5704ac162.png",
+        "sponsor-2026-43-99074eb6-37ab-48dc-b65a-ce285a1e020e.jpg",
+        "sponsor-2026-44-88f0020d-97ee-49fc-a6a8-4f91bff0bddd.jpg",
+        "sponsor-2026-45-d6fc4db7-f04b-443c-a588-ed8913ff5782.jpg",
+        "sponsor-2026-46-3ef02db8-bc8b-4a71-916d-a0e134e3c700.jpg",
+        "sponsor-2026-47-130d7b54-d058-4ecc-ae7c-f2dfbca6e215.png",
+        "sponsor-2026-48-222ecf12-746b-4373-a3f2-b0548957b43e.jpeg",
+        "sponsor-2026-49-81480bdd-6549-4f88-a79c-a5c41fe219a2.png",
+        "sponsor-2026-50-03dd3c3f-7b01-4c8b-aef8-0551d8e10a21.jpg",
+        "sponsor-2026-51-4b141309-c877-480b-93ca-5d36e2a6dbd9.png",
+        "sponsor-2026-52-e250a687-cad1-4ef2-867e-7687ed28edde.jpg",
+        "sponsor-2026-53-79a1be47-4d3e-44b3-855b-8dcd740fb25f.jpg",
+        "sponsor-2026-54-6427c14f-8618-4ed5-ae4b-75ba029dffe9.png",
+        "sponsor-2026-55-3441a13d-a734-4726-bd08-95d51d5a9433.jpeg",
+        "sponsor-2026-56-453f053a-2db9-49be-aa29-b308bbde5475.jpg"
+    ].map((filename, index) => ({
+        name: `Patrocinador ${String(index + 1).padStart(2, "0")}`,
+        logo: `images/sponsors/2026/${filename}`,
+        category: "colaborador"
+    })),
+
     // ====================================
     // RACE PHOTOS SECTION
     // ====================================
     racePhotos: {
-        title: "Fotos de la Carrera",
-        description: "¡Revive los mejores momentos de nuestra carrera solidaria! Aquí encontrarás todas las fotografías del evento una vez finalizado.",
-        buttonText: "Ver Fotos de la Carrera",
-        note: "Las fotos estarán disponibles después del evento",
-        url: "https://www.fotoadictoslarioja.com/i-carrera-solidaria-guardia-civil-la-rioja-por-el-autismo", // Update this with the actual photo gallery URL when available
-        isAvailable: true // Set to true when photos are ready and URL is updated
+        title: "Fotos de la carrera",
+        description: "La galería de fotos de la edición 2026 todavía no está disponible.",
+        buttonText: "Fotos próximamente",
+        note: "Las fotos de esta edición se publicarán después del evento.",
+        url: "#",
+        isAvailable: false
     },
 
     // ====================================
     // CONTACT INFORMATION
     // ====================================
     contact: {
-        email: "lo-zon-carrerapopular@guardiacivil.org",
+        organizer: "10.ª Zona de la Guardia Civil de La Rioja",
         phone: "+34 941 22 99 00",
-        address: "C. Duques de Nájera, 147, 26005 Logroño",
-        socialMedia: {
-            instagram: "https://www.instagram.com/gc_carrera_popular_la_rioja"
-        }
+        instagram: "https://instagram.com/gc_carrera_popular_la_rioja/"
     },
 
     // ====================================
     // IMAGES CONFIGURATION
     // ====================================
     images: {
-        logo: "images/logo.png",
-        heroImage: "images/hero-image.jpg",
-        objectiveImage: "images/objective-image.jpg",
-        shirtImage: "images/camiseta.png", // Official race t-shirt image
-        cartelImage: "images/cartel.jpg", // Event poster image
-        // Add more image paths as needed
-        galleryImages: [
-            "images/gallery1.png",
-            "images/gallery2.png",
-            "images/gallery3.png",
-            "images/gallery4.png",
-            "images/gallery5.png"
-        ]
+        logo: "images/2026/logo-carrera-2026.jpeg",
+        heroImage: "images/2026/logo-carrera-2026.jpeg",
+        objectiveImage: "images/2026/camiseta-carrera-2026-delante-y-detras.jpeg",
+        shirtImage: "images/2026/camiseta-carrera-2026-delante-y-detras.jpeg",
+        bibImage: "images/2026/dorsal-carrera-2026.jpeg",
+        runnerPackImage: "images/2026/bolsa-y-camiseta-carrera-2026.jpeg",
+        cartelImage: "images/2026/cartel-carrera-2026.jpeg"
     },
 
     // ====================================
     // OFFICIAL T-SHIRT SECTION
     // ====================================
     shirt: {
-        title: "Camiseta Oficial",
-        subtitle: "Diseño Conmemorativo de la Carrera",
-        description: "Camiseta técnica oficial de la I Carrera Solidaria Guardia Civil de La Rioja. Incluida en todas las inscripciones.\
-                        <br><br>Material técnico transpirable.\
-                        <br>Diseño conmemorativo exclusivo.\
-                        <br>Tallas desde los 4 años hasta XXL.\
-                        <br>Incluida en el precio de inscripción.",
-        features: []
+        title: "Material de la edición 2026",
+        subtitle: "Camiseta, dorsal y bolsa",
+        description: "Imágenes del material de esta edición. RockTheSport ofrece la camiseta solidaria como una opción de inscripción por 10 €.",
+        features: [
+            "Camiseta de la II Carrera Solidaria",
+            "Dorsal de la edición 2026",
+            "Bolsa y camiseta"
+        ]
     },
 
     // ====================================
@@ -508,8 +581,8 @@ const CONFIG = {
         enableContactForm: false, // Contact form has been removed
         googleMapsEmbedUrl: "", // Add Google Maps embed URL if needed
         // Colors (you can customize the main colors)
-        primaryColor: "#2563eb",
-        secondaryColor: "#667eea"
+        primaryColor: "#0b5b39",
+        secondaryColor: "#f15a24"
     }
 };
 
@@ -550,10 +623,9 @@ HOW TO EDIT THIS FILE:
 
 7. SPONSORS:
    - Add sponsor information to the sponsors array
-   - Place sponsor logos in the "images/sponsors/" folder
+   - Keep sponsor logos separated by edition in "images/sponsors/2025/" and "images/sponsors/2026/"
    - Sponsor images should be named descriptively (e.g., guardia-civil.png)
-   - The first sponsor (Guardia Civil) appears first, followed by Ayuntamiento de Villamediana
-   - Categories help organize sponsors: principal, institucional, deportivo, tecnologia, local, etc.
+   - 2026 logos currently use neutral labels because the event page does not provide sponsor names
 
 8. RACE PHOTOS:
    - Update racePhotos.url with the actual photo gallery URL when available
@@ -566,4 +638,3 @@ IMPORTANT:
 - Don't forget commas after each item in arrays
 - Test the website after making changes
 */
-
