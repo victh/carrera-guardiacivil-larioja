@@ -58,6 +58,7 @@ function populateEventDetails() {
         image.src = CONFIG.images.logo;
         image.alt = CONFIG.event.title;
     });
+    document.getElementById('hero-registration-btn').href = CONFIG.registration.registrationUrl;
 }
 
 function populateObjective() {
@@ -65,7 +66,8 @@ function populateObjective() {
     document.getElementById('beneficiary-org').textContent = CONFIG.objective.beneficiaryOrg;
     const objectiveImage = document.querySelector('.objective-image img');
     objectiveImage.src = CONFIG.images.objectiveImage;
-    objectiveImage.alt = `Material de la carrera a favor de ${CONFIG.objective.beneficiaryOrg}`;
+    objectiveImage.alt = `Sesión de rehabilitación en el Centro de Atención Integral de ${CONFIG.objective.beneficiaryOrg}`;
+    document.getElementById('objective-image-credit').href = CONFIG.images.objectiveImageSource;
 }
 
 function populateDistances() {

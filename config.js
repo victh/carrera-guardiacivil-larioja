@@ -61,8 +61,8 @@ const CONFIG = {
     registration: {
         status: "open", // "open", "closed", "sold_out"
         statusTitle: "¡Inscripciones abiertas!",
-        statusText: "Inscríbete hasta el 8 de noviembre de 2026 a las 23:59 en RockTheSport.",
-        registrationUrl: "https://www.rockthesport.com/es/evento/ii-carrera-guardia-civil-la-rioja"
+        statusText: "Inscríbete ahora y forma parte de esta causa solidaria. Inscripciones abiertas hasta el 8 de noviembre de 2026 a las 23:59.",
+        registrationUrl: "https://www.rockthesport.com/es/evento/ii-carrera-guardia-civil-la-rioja/inscripcion/selecciona-tarifa"
     },
 
     // ====================================
@@ -101,32 +101,8 @@ const CONFIG = {
         },
         {
             category: "Dorsal solidario",
-            price: "Donación",
-            description: "Aportación solidaria de importe libre.",
-            featured: false
-        },
-        {
-            category: "Dorsal solidario (5 €)",
-            price: "5 €",
-            description: "Donación solidaria.",
-            featured: false
-        },
-        {
-            category: "Dorsal solidario (10 €)",
-            price: "10 €",
-            description: "Donación solidaria.",
-            featured: false
-        },
-        {
-            category: "Dorsal solidario (20 €)",
-            price: "20 €",
-            description: "Donación solidaria.",
-            featured: false
-        },
-        {
-            category: "Dorsal solidario (50 €)",
-            price: "50 €",
-            description: "Donación solidaria.",
+            price: "Importe libre o 5, 10, 20 o 50 €",
+            description: "Elige una aportación libre o una de las cantidades solidarias disponibles.",
             featured: false
         }
     ],
@@ -549,7 +525,8 @@ const CONFIG = {
     images: {
         logo: "images/2026/logo-carrera-2026.jpeg",
         heroImage: "images/2026/logo-carrera-2026.jpeg",
-        objectiveImage: "images/2026/camiseta-carrera-2026-delante-y-detras.jpeg",
+        objectiveImage: "https://www.ardem.es/wp-content/uploads/2011/06/centro-atencion-integral-ardem-1.jpg",
+        objectiveImageSource: "https://www.ardem.es/ardemrioja/centro-de-atencion-integral/",
         shirtImage: "images/2026/camiseta-carrera-2026-delante-y-detras.jpeg",
         bibImage: "images/2026/dorsal-carrera-2026.jpeg",
         runnerPackImage: "images/2026/bolsa-y-camiseta-carrera-2026.jpeg",

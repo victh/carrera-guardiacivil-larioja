@@ -91,7 +91,7 @@ body {
 .hero {
     margin-top: 80px;
     padding: 4rem 0;
-    background: linear-gradient(135deg, #0b5b39 0%, #133e2d 100%);
+    background: linear-gradient(135deg, rgba(46, 125, 10, 0.8) 0%, rgba(26, 74, 5, 0.8) 100%), url('images/hero-image.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -344,6 +344,18 @@ body {
     height: auto;
     border-radius: 12px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.objective-image-credit {
+    display: block;
+    margin-top: 0.75rem;
+    color: #6b7280;
+    font-size: 0.85rem;
+    text-align: center;
+}
+
+.objective-image-credit a {
+    color: inherit;
 }
 
 /* Registration Status */
