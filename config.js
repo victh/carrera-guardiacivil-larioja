@@ -523,10 +523,11 @@ const CONFIG = {
     // IMAGES CONFIGURATION
     // ====================================
     images: {
-        logo: "images/2026/logo-carrera-2026.jpeg",
+        logo: "images/logo.png",
+        heroLogo: "images/2026/logo-carrera-2026.jpeg",
         heroImage: "images/2026/logo-carrera-2026.jpeg",
-        objectiveImage: "https://www.ardem.es/wp-content/uploads/2011/06/centro-atencion-integral-ardem-1.jpg",
-        objectiveImageSource: "https://www.ardem.es/ardemrioja/centro-de-atencion-integral/",
+        objectiveImage: "images/2026/ardem-logo-oficial.png",
+        objectiveImageSource: "https://www.ardem.es/logotipo-ardem/",
         shirtImage: "images/2026/camiseta-carrera-2026-delante-y-detras.jpeg",
         bibImage: "images/2026/dorsal-carrera-2026.jpeg",
         runnerPackImage: "images/2026/bolsa-y-camiseta-carrera-2026.jpeg",

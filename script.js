@@ -54,10 +54,13 @@ function populateEventDetails() {
     document.querySelector('.footer-logo span').textContent = CONFIG.event.title;
     document.title = `${CONFIG.event.title} | 2026`;
 
-    document.querySelectorAll('.nav-logo img, .hero-logo-img, .footer-logo img').forEach(image => {
+    document.querySelectorAll('.nav-logo img, .footer-logo img').forEach(image => {
         image.src = CONFIG.images.logo;
-        image.alt = CONFIG.event.title;
+        image.alt = 'Escudo de la Guardia Civil, 10.ª Zona de La Rioja';
     });
+    const heroLogo = document.querySelector('.hero-logo-img');
+    heroLogo.src = CONFIG.images.heroLogo;
+    heroLogo.alt = `Logotipo de ${CONFIG.event.title}`;
     document.getElementById('hero-registration-btn').href = CONFIG.registration.registrationUrl;
 }
 
@@ -66,7 +69,7 @@ function populateObjective() {
     document.getElementById('beneficiary-org').textContent = CONFIG.objective.beneficiaryOrg;
     const objectiveImage = document.querySelector('.objective-image img');
     objectiveImage.src = CONFIG.images.objectiveImage;
-    objectiveImage.alt = `Sesión de rehabilitación en el Centro de Atención Integral de ${CONFIG.objective.beneficiaryOrg}`;
+    objectiveImage.alt = `Logotipo de ${CONFIG.objective.beneficiaryOrg}`;
     document.getElementById('objective-image-credit').href = CONFIG.images.objectiveImageSource;
 }
 
