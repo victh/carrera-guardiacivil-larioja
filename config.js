@@ -31,27 +31,27 @@ const CONFIG = {
     distances: [
         {
             distance: "500 m",
-            category: "Carrera",
+            category: "Carrera (nacidos entre 2018 y 2023)",
             time: "11:00",
-            description: "Salida de la carrera de 500 m."
+            description: "Salida de la carrera de 500 m. Edad permitida indicada en RockTheSport: nacidos entre 2018 y 2023."
         },
         {
             distance: "1 km",
-            category: "Carrera",
+            category: "Carrera (nacidos entre 2014 y 2017)",
             time: "11:15",
-            description: "Salida de la carrera de 1 km."
+            description: "Salida de la carrera de 1 km. Edad permitida indicada en RockTheSport: nacidos entre 2014 y 2017."
         },
         {
             distance: "6 km",
-            category: "Carrera",
+            category: "Carrera (edad mínima: nacidos en 2013)",
             time: "12:00",
-            description: "Salida de la carrera de 6 km."
+            description: "Salida de la carrera de 6 km. Edad mínima indicada en RockTheSport: nacidos en 2013."
         },
         {
             distance: "6 km",
-            category: "Caminata",
+            category: "Caminata (edad no indicada)",
             time: "12:01",
-            description: "Salida de la caminata solidaria."
+            description: "Salida de la caminata solidaria. La tarifa no publica un requisito de edad para esta modalidad."
         }
     ],
 
