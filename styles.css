@@ -91,9 +91,9 @@ body {
 .hero {
     margin-top: 80px;
     padding: 4rem 0;
-    background: linear-gradient(135deg, rgba(46, 125, 10, 0.8) 0%, rgba(26, 74, 5, 0.8) 100%), url('images/hero-image.jpg');
+    background: linear-gradient(135deg, rgba(20, 54, 17, 0.52) 0%, rgba(15, 41, 12, 0.58) 100%), url('images/2026/hero-carrera-2026.jpeg');
     background-size: cover;
-    background-position: center;
+    background-position: center 52%;
     background-attachment: fixed;
     color: white;
     display: flex;
@@ -208,10 +208,6 @@ body {
     box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
 }
 
-.hero-image {
-    display: none;
-}
-
 /* Cartel Section */
 .cartel-section {
     padding: 2rem 0;
@@ -241,6 +237,45 @@ body {
 .event-details {
     padding: 5rem 0;
     background: #f8fafc;
+}
+
+.regulation {
+    padding: 3rem 0;
+    background: #ffffff;
+    text-align: center;
+}
+
+#reglamento {
+    scroll-margin-top: 100px;
+}
+
+.regulation p {
+    margin: -1rem auto 1.5rem;
+    color: #4b5563;
+}
+
+.race-route {
+    margin-top: 3rem;
+}
+
+.race-route figure {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.race-route img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.race-route figcaption {
+    margin-top: 0.75rem;
+    color: #6b7280;
+    font-size: 0.9rem;
+    text-align: left;
 }
 
 .event-info {
@@ -911,7 +946,7 @@ body {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 1100px) {
     .hamburger {
         display: flex;
     }
@@ -932,9 +967,12 @@ body {
     .nav-menu.active {
         left: 0;
     }
+}
 
+@media (max-width: 768px) {
     .hero {
         background-attachment: scroll;
+        background-position: center 56%;
     }
     
     .hero-content {

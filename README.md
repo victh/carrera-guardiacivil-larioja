@@ -29,13 +29,15 @@ Runweb/
 
 La información publicada en la web se contrasta con la [ficha del evento en RockTheSport](https://www.rockthesport.com/es/evento/ii-carrera-guardia-civil-la-rioja).
 
-- **Lugar:** Aparcamiento del Polideportivo Mazo, Haro (La Rioja).
+- **Lugar:** Parking del Mazo (calle Severo Ochoa, 45), Haro (La Rioja).
 - **Horario general:** de 9:00 a 18:00; el programa de actividades comienza a las 10:00.
 - **Carreras y caminata:** 500 m a las 11:00, 1 km a las 11:15, carrera de 6 km a las 12:00 y caminata a las 12:01.
-- **Edades publicadas por modalidad:** 500 m, nacidos entre 2018 y 2023; 1 km, nacidos entre 2014 y 2017; 6 km, edad mínima indicada: nacidos en 2013. La tarifa de la caminata no publica un requisito de edad.
+- **Edades según el reglamento:** 500 m, nacidos entre 2018 y 2023; 1 km, nacidos entre 2014 y 2017; 6 km, nacidos en 2013 o antes; caminata, todas las edades.
+- **Reglamento:** disponible en la web como [PDF](documents/reglamento-carrera-2026.pdf).
+- **Recorrido:** imagen en `images/2026/recorrido-carrera-2026.png`; su mapa base no tiene una atribución o licencia legible en el archivo recibido.
 - **Tarifas:** 6 km y caminata, 10 €; 1 km y 500 m, 8 €; camiseta solidaria, 10 €; dorsal solidario, donación libre o de 5 €, 10 €, 20 € o 50 €.
 - **Patrocinadores:** los logotipos están separados por edición en `images/sponsors/2025/` e `images/sponsors/2026/`.
-- **Material del evento:** las imágenes de cartel, logo, dorsal, camiseta y bolsa están en `images/2026/`.
+- **Material del evento:** las imágenes del cartel, logo, dorsal, camiseta, bolsa y fotografía del hero están en `images/2026/`.
 
 El programa completo, las tarifas y las inscripciones pueden cambiar; consulta la ficha oficial antes de acudir.
 
@@ -51,7 +53,7 @@ event: {
     subtitle: "Deporte y solidaridad en Haro",
     description: "Corre o camina a favor de ARDEM",
     date: "Domingo, 15 de noviembre de 2026",
-    location: "Aparcamiento del Polideportivo Mazo, Haro",
+    location: "Parking del Mazo (calle Severo Ochoa, 45), Haro (La Rioja)",
     time: "9:00–18:00"
 }
 ```
