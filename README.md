@@ -34,7 +34,7 @@ La información publicada en la web se contrasta con la [ficha del evento en Roc
 - **Carreras y caminata:** 500 m a las 11:00, 1 km a las 11:15, carrera de 6 km a las 12:00 y caminata a las 12:01.
 - **Edades según el reglamento:** 500 m, nacidos entre 2018 y 2023; 1 km, nacidos entre 2014 y 2017; 6 km, nacidos en 2013 o antes; caminata, todas las edades.
 - **Reglamento:** disponible en la web como [PDF](documents/reglamento-carrera-2026.pdf).
-- **Recorrido:** imagen en `images/2026/recorrido-carrera-2026.png`; su mapa base no tiene una atribución o licencia legible en el archivo recibido.
+- **Recorrido:** imagen en `images/2026/recorrido-carrera-2026.png` y detalles descargables en `documents/detalles-recorrido-carrera-2026.pdf`.
 - **Tarifas:** 6 km y caminata, 10 €; 1 km y 500 m, 8 €; camiseta solidaria, 10 €; dorsal solidario, donación libre o de 5 €, 10 €, 20 € o 50 €.
 - **Patrocinadores:** los logotipos están separados por edición en `images/sponsors/2025/` e `images/sponsors/2026/`.
 - **Material del evento:** las imágenes del cartel, logo, dorsal, camiseta, bolsa y fotografía del hero están en `images/2026/`.
