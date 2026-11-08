@@ -49,7 +49,7 @@ const CONFIG = {
         },
         {
             distance: "6 km",
-            category: "Caminata (edad no indicada)",
+            category: "Caminata",
             time: "12:01",
             description: "Salida de la caminata solidaria. La tarifa no publica un requisito de edad para esta modalidad."
         }
@@ -506,6 +506,7 @@ const CONFIG = {
         description: "La galería de fotos de la edición 2026 todavía no está disponible.",
         buttonText: "Fotos próximamente",
         note: "Las fotos de esta edición se publicarán después del evento.",
+        previousEditionUrl: "https://photos.app.goo.gl/VhQF2Q8EZNmdV1h17",
         url: "#",
         isAvailable: false
     },
@@ -540,7 +541,7 @@ const CONFIG = {
     shirt: {
         title: "Material de la edición 2026",
         subtitle: "Camiseta, dorsal y bolsa",
-        description: "Imágenes del material de esta edición. Camiseta solidaria disponible por 10 €.",
+        description: "Camiseta solidaria disponible por 10 €.",
         features: [
             "Camiseta de la II Carrera Solidaria",
             "Dorsal de la edición 2026",

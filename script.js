@@ -251,6 +251,10 @@ function populateRacePhotos() {
     
     const photosBtn = document.getElementById('photos-btn');
     const photosNote = document.getElementById('photos-note');
+    const previousPhotosBtn = document.getElementById('previous-photos-btn');
+    previousPhotosBtn.href = CONFIG.racePhotos.previousEditionUrl;
+    previousPhotosBtn.target = '_blank';
+    previousPhotosBtn.rel = 'noopener noreferrer';
     
     // Update button text
     photosBtn.innerHTML = `<i class="fas fa-camera"></i> ${CONFIG.racePhotos.buttonText}`;
