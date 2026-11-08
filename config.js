@@ -527,7 +527,7 @@ const CONFIG = {
     images: {
         logo: "images/logo.png",
         heroLogo: "images/2026/logo-carrera-2026.jpeg",
-        heroImage: "images/2026/logo-carrera-2026.jpeg",
+        heroImage: "images/2026/hero-carrera-2026.jpeg",
         objectiveImage: "images/2026/ardem-logo-oficial.png",
         objectiveImageSource: "https://www.ardem.es/logotipo-ardem/",
         shirtImage: "images/2026/camiseta-carrera-2026-delante-y-detras.jpeg",
