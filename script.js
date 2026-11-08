@@ -50,11 +50,27 @@ function populateEventDetails() {
     document.querySelector('.hero-title').textContent = CONFIG.event.title;
     document.querySelector('.hero-subtitle').textContent = CONFIG.event.subtitle;
     document.querySelector('.hero-description').textContent = CONFIG.event.description;
+    document.querySelector('.nav-title').textContent = 'II Carrera Solidaria';
+    document.querySelector('.footer-logo span').textContent = CONFIG.event.title;
+    document.title = `${CONFIG.event.title} | 2026`;
+
+    document.querySelectorAll('.nav-logo img, .footer-logo img').forEach(image => {
+        image.src = CONFIG.images.logo;
+        image.alt = 'Escudo de la Guardia Civil, 10.ª Zona de La Rioja';
+    });
+    const heroLogo = document.querySelector('.hero-logo-img');
+    heroLogo.src = CONFIG.images.heroLogo;
+    heroLogo.alt = `Logotipo de ${CONFIG.event.title}`;
+    document.getElementById('hero-registration-btn').href = CONFIG.registration.registrationUrl;
 }
 
 function populateObjective() {
     document.getElementById('objective-description').textContent = CONFIG.objective.description;
     document.getElementById('beneficiary-org').textContent = CONFIG.objective.beneficiaryOrg;
+    const objectiveImage = document.querySelector('.objective-image img');
+    objectiveImage.src = CONFIG.images.objectiveImage;
+    objectiveImage.alt = `Logotipo de ${CONFIG.objective.beneficiaryOrg}`;
+    document.getElementById('objective-image-credit').href = CONFIG.images.objectiveImageSource;
 }
 
 function populateDistances() {
@@ -78,10 +94,16 @@ function populateRegistrationStatus() {
     document.getElementById('registration-status-text').textContent = CONFIG.registration.statusText;
     
     const statusBtn = document.getElementById('registration-btn');
+    statusBtn.href = CONFIG.registration.registrationUrl;
+    statusBtn.target = '_blank';
+    statusBtn.rel = 'noopener noreferrer';
     if (CONFIG.registration.status === 'closed' || CONFIG.registration.status === 'sold_out') {
         statusBtn.textContent = 'Inscripciones Cerradas';
         statusBtn.className = 'btn btn-secondary';
         statusBtn.style.pointerEvents = 'none';
+        statusBtn.setAttribute('aria-disabled', 'true');
+    } else {
+        statusBtn.textContent = 'Inscríbete';
     }
 }
 
@@ -154,6 +176,8 @@ function populateShirt() {
     if (shirtImg) {
         shirtImg.src = CONFIG.images.shirtImage;
     }
+    document.getElementById('bib-img').src = CONFIG.images.bibImage;
+    document.getElementById('runner-pack-img').src = CONFIG.images.runnerPackImage;
     
     // Populate features
     const featuresContainer = document.getElementById('shirt-features');
@@ -197,78 +221,27 @@ function populateSponsors() {
         return;
     }
     
-    // Define priority sponsors (GuardiaCivil, AYTO, ARPA)
-    const prioritySponsors = CONFIG.sponsors.filter(sponsor => 
-        sponsor.category === 'principal' || 
-        sponsor.category === 'institucional' || 
-        sponsor.category === 'beneficiario' ||
-        sponsor.name.toLowerCase().includes('guardia civil') ||
-        sponsor.name.toLowerCase().includes('ayuntamiento') ||
-        sponsor.name.toLowerCase().includes('arpa')
-    ).slice(0, 3); // Take only first 3 priority sponsors
-    
-    // Get remaining sponsors
-    const regularSponsors = CONFIG.sponsors.filter(sponsor => 
-        !prioritySponsors.includes(sponsor)
-    );
-    
-    // Create priority sponsors row
-    if (prioritySponsors.length > 0) {
-        const priorityRow = document.createElement('div');
-        priorityRow.className = 'sponsors-priority-row';
-        
-        prioritySponsors.forEach(sponsor => {
-            const sponsorItem = document.createElement('div');
-            sponsorItem.className = 'sponsor-priority';
-            
-            const content = `
-                <img src="${sponsor.logo}" alt="${sponsor.name}" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                <div style="display:none; padding: 20px; color: #666;">
-                    <i class="fas fa-image" style="font-size: 3rem; margin-bottom: 15px;"></i>
-                    <p style="font-size: 1.1rem; font-weight: 600;">${sponsor.name}</p>
-                </div>
-            `;
-            
-            if (sponsor.website) {
-                sponsorItem.innerHTML = `<a href="${sponsor.website}" target="_blank" style="display: flex; align-items: center; justify-content: center; height: 100%;">${content}</a>`;
-            } else {
-                sponsorItem.innerHTML = content;
-            }
-            
-            priorityRow.appendChild(sponsorItem);
-        });
-        
-        container.appendChild(priorityRow);
-    }
-    
-    // Create regular sponsors table
-    if (regularSponsors.length > 0) {
-        const sponsorsTable = document.createElement('div');
-        sponsorsTable.className = 'sponsors-table';
-        
-        regularSponsors.forEach(sponsor => {
-            const sponsorItem = document.createElement('div');
-            sponsorItem.className = 'sponsor-item';
-            
-            const content = `
-                <img src="${sponsor.logo}" alt="${sponsor.name}" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                <div style="display:none; padding: 15px; color: #666;">
-                    <i class="fas fa-image" style="font-size: 1.5rem; margin-bottom: 8px;"></i>
-                    <p style="font-size: 0.9rem;">${sponsor.name}</p>
-                </div>
-            `;
-            
-            if (sponsor.website) {
-                sponsorItem.innerHTML = `<a href="${sponsor.website}" target="_blank" style="display: flex; align-items: center; justify-content: center; height: 100%;">${content}</a>`;
-            } else {
-                sponsorItem.innerHTML = content;
-            }
-            
-            sponsorsTable.appendChild(sponsorItem);
-        });
-        
-        container.appendChild(sponsorsTable);
-    }
+    const sponsorsTable = document.createElement('div');
+    sponsorsTable.className = 'sponsors-table';
+
+    CONFIG.sponsors.forEach((sponsor, index) => {
+        const sponsorItem = document.createElement('div');
+        sponsorItem.className = 'sponsor-item';
+
+        const image = document.createElement('img');
+        image.src = sponsor.logo;
+        image.alt = `Logotipo de patrocinador ${index + 1}`;
+        image.loading = 'lazy';
+        image.onerror = function() {
+            this.alt = `Logotipo de patrocinador ${index + 1} no disponible`;
+            this.style.display = 'none';
+        };
+
+        sponsorItem.appendChild(image);
+        sponsorsTable.appendChild(sponsorItem);
+    });
+
+    container.appendChild(sponsorsTable);
 }
 
 function populateRacePhotos() {
@@ -278,6 +251,10 @@ function populateRacePhotos() {
     
     const photosBtn = document.getElementById('photos-btn');
     const photosNote = document.getElementById('photos-note');
+    const previousPhotosBtn = document.getElementById('previous-photos-btn');
+    previousPhotosBtn.href = CONFIG.racePhotos.previousEditionUrl;
+    previousPhotosBtn.target = '_blank';
+    previousPhotosBtn.rel = 'noopener noreferrer';
     
     // Update button text
     photosBtn.innerHTML = `<i class="fas fa-camera"></i> ${CONFIG.racePhotos.buttonText}`;
@@ -291,6 +268,7 @@ function populateRacePhotos() {
         photosBtn.href = "#";
         photosBtn.style.opacity = "0.7";
         photosBtn.style.cursor = "not-allowed";
+        photosBtn.setAttribute('aria-disabled', 'true');
         photosNote.textContent = CONFIG.racePhotos.note;
         
         // Prevent clicking when not available
@@ -304,15 +282,13 @@ function populateRacePhotos() {
 }
 
 function populateContact() {
-    document.getElementById('contact-email').textContent = CONFIG.contact.email;
-    document.getElementById('contact-phone').textContent = CONFIG.contact.phone;
-    document.getElementById('contact-address').textContent = CONFIG.contact.address;
-        
-    // Update social media links
-    //const socialLinks = document.querySelectorAll('.social-link');
-    //if (socialLinks[0]) socialLinks[0].href = CONFIG.contact.socialMedia.facebook || '#';
-    //if (socialLinks[1]) socialLinks[1].href = CONFIG.contact.socialMedia.twitter || '#';
-    //if (socialLinks[2]) socialLinks[2].href = CONFIG.contact.socialMedia.instagram || 'https://www.instagram.com/gc_carrera_popular_la_rioja/';
+    document.getElementById('contact-organizer').textContent = CONFIG.contact.organizer;
+    const phoneLink = document.getElementById('contact-phone');
+    phoneLink.textContent = CONFIG.contact.phone;
+    phoneLink.href = `tel:${CONFIG.contact.phone.replace(/[^\d+]/g, '')}`;
+    const instagramLink = document.getElementById('contact-instagram');
+    instagramLink.href = CONFIG.contact.instagram;
+    document.querySelector('.footer-social .social-link').href = CONFIG.contact.instagram;
 }
 
 function populateCartelImage() {
@@ -428,28 +404,16 @@ function addScrollAnimations() {
 // HANDLER FUNCTIONS
 // ====================================
 function handleRegistration(category) {
-    // You can customize this function to handle registration
-    // For now, it shows an alert, but you can integrate with a registration system
-    
     if (CONFIG.registration.status === 'closed' || CONFIG.registration.status === 'sold_out') {
         showNotification('Las inscripciones están cerradas', 'error');
         return;
     }
-    
-    showNotification(`Inscripción para ${category}. Redirigiendo a la plataforma de inscripciones...`, 'info');
-    
-    // Here you would typically redirect to a registration system
-    window.location.href = 'https://www.rockthesport.com/es/evento/gc_carrera_popular_la_rioja';
-    
-    // Or open a modal with registration form
-    // openRegistrationModal(category);
+
+    window.location.href = CONFIG.registration.registrationUrl;
 }
 
 function handleDonation(amount) {
-    showNotification(`Donación de ${amount}€. Redirigiendo al sistema de pagos...`, 'info');
-    
-    // Here you would integrate with a payment system
-    window.location.href = 'https://www.rockthesport.com/es/evento/gc_carrera_popular_la_rioja';
+    window.location.href = CONFIG.registration.registrationUrl;
 }
 
 // Contact form has been removed - function no longer needed
@@ -613,4 +577,3 @@ window.CarreraSolidaria = {
     shareEvent,
     printPage
 };
-
