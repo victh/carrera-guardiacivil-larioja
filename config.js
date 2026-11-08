@@ -531,7 +531,7 @@ const CONFIG = {
         objectiveImageSource: "https://www.ardem.es/logotipo-ardem/",
         shirtImage: "images/2026/camiseta-carrera-2026-delante-y-detras.jpeg",
         bibImage: "images/2026/dorsal-carrera-2026.jpeg",
-        runnerPackImage: "images/2026/bolsa-y-camiseta-carrera-2026.jpeg",
+        runnerPackImage: "images/2026/bolsa-carrera-2026.jpeg",
         cartelImage: "images/2026/cartel-carrera-2026.jpeg"
     },
 
