@@ -286,6 +286,9 @@ function populateContact() {
     const phoneLink = document.getElementById('contact-phone');
     phoneLink.textContent = CONFIG.contact.phone;
     phoneLink.href = `tel:${CONFIG.contact.phone.replace(/[^\d+]/g, '')}`;
+    const emailLink = document.getElementById('contact-email');
+    emailLink.textContent = CONFIG.contact.email;
+    emailLink.href = `mailto:${CONFIG.contact.email}`;
     const instagramLink = document.getElementById('contact-instagram');
     instagramLink.href = CONFIG.contact.instagram;
     document.querySelector('.footer-social .social-link').href = CONFIG.contact.instagram;

@@ -243,6 +243,24 @@ body {
     background: #f8fafc;
 }
 
+.regulation {
+    padding: 3rem 0;
+    background: #ffffff;
+    text-align: center;
+}
+
+.regulation p {
+    margin: -1rem auto 1.5rem;
+    color: #4b5563;
+}
+
+.regulation .regulation-note {
+    max-width: 760px;
+    margin-top: -0.5rem;
+    font-size: 0.9rem;
+    color: #6b7280;
+}
+
 .event-info {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));

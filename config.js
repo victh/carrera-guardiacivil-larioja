@@ -13,7 +13,7 @@ const CONFIG = {
         subtitle: "Deporte y solidaridad en Haro",
         description: "Corre o camina el 15 de noviembre y colabora con la Asociación Riojana de Esclerosis Múltiple (ARDEM).",
         date: "Domingo, 15 de noviembre de 2026",
-        location: "Aparcamiento del Polideportivo Mazo, Haro (La Rioja)",
+        location: "Parking del Mazo (calle Severo Ochoa, 45), Haro (La Rioja)",
         time: "9:00–18:00 (actividades desde las 10:00)"
     },
 
@@ -43,15 +43,15 @@ const CONFIG = {
         },
         {
             distance: "6 km",
-            category: "Carrera (edad mínima: nacidos en 2013)",
+            category: "Carrera (nacidos en 2013 o antes)",
             time: "12:00",
-            description: "Salida de la carrera de 6 km. Edad mínima: nacidos en 2013."
+            description: "Salida de la carrera de 6 km. Categoría para nacidos en 2013 o antes."
         },
         {
             distance: "6 km",
             category: "Caminata",
             time: "12:01",
-            description: "Salida de la caminata solidaria. La tarifa no publica un requisito de edad para esta modalidad."
+            description: "Salida de la caminata solidaria, abierta a todas las edades."
         }
     ],
 
@@ -517,6 +517,7 @@ const CONFIG = {
     contact: {
         organizer: "10.ª Zona de la Guardia Civil de La Rioja",
         phone: "+34 941 22 99 00",
+        email: "Lo-zon-carrerapopular@guardiacivil.org",
         instagram: "https://instagram.com/gc_carrera_popular_la_rioja/"
     },
 
