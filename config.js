@@ -33,19 +33,19 @@ const CONFIG = {
             distance: "500 m",
             category: "Carrera (nacidos entre 2018 y 2023)",
             time: "11:00",
-            description: "Salida de la carrera de 500 m. Edad permitida indicada en RockTheSport: nacidos entre 2018 y 2023."
+            description: "Salida de la carrera de 500 m. Edad permitida: nacidos entre 2018 y 2023."
         },
         {
             distance: "1 km",
             category: "Carrera (nacidos entre 2014 y 2017)",
             time: "11:15",
-            description: "Salida de la carrera de 1 km. Edad permitida indicada en RockTheSport: nacidos entre 2014 y 2017."
+            description: "Salida de la carrera de 1 km. Edad permitida: nacidos entre 2014 y 2017."
         },
         {
             distance: "6 km",
             category: "Carrera (edad mínima: nacidos en 2013)",
             time: "12:00",
-            description: "Salida de la carrera de 6 km. Edad mínima indicada en RockTheSport: nacidos en 2013."
+            description: "Salida de la carrera de 6 km. Edad mínima: nacidos en 2013."
         },
         {
             distance: "6 km",
@@ -540,7 +540,7 @@ const CONFIG = {
     shirt: {
         title: "Material de la edición 2026",
         subtitle: "Camiseta, dorsal y bolsa",
-        description: "Imágenes del material de esta edición. RockTheSport ofrece la camiseta solidaria como una opción de inscripción por 10 €.",
+        description: "Imágenes del material de esta edición. Camiseta solidaria disponible por 10 €.",
         features: [
             "Camiseta de la II Carrera Solidaria",
             "Dorsal de la edición 2026",
